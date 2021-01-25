@@ -1,0 +1,115 @@
+---
+title: "2019 Field design"
+output: NULL
+author: "Semra Palali Delen"
+date: 01-25-2021
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+# Nomenclature for the field design
+
+In 2019, we used the same design, but just one check.
+
+1. Two blocks (North, South), low and high N plot in each block. North is lowland and South is highland.
+2. 4 split-plots per block by height and flowering time (tall/early, tall/late, short/early, short/late)
+split plots, subdivided into 3 incomplete split-plot-blocks
+3x8 = 24 subplots per split plot block
+
+## Dimensions:
+
+1. Plot: 120 ft x 240 ft
+2. subplot 20 ft x 5 ft, 288 subplots per plot and 72 subplots per split plot
+17.5 feet would give us 20 foot plots with 30 inches between varieties.
+
+----------------
+
+# Seed sources:
+1. Schnable Lab Chile 2019
+2. Schachtman and Yang Lab Chile 2018 remaining
+
+
+```{r}
+fb <- read.csv("data/fb2019_JY_282_4plots_havelock_final.csv")
+```
+
+### Two blocks
+```{r}
+fb$block <- "B1"
+fb[fb$row > 3000,]$block <- "B2"
+
+fb$nitrogen <- "+N"
+fb[fb$row > 2000 & fb$row < 4000, ]$nitrogen <- "-N"
+
+```
+
+
+
+### four split-blocks per block
+
+```{r}
+fb$sb <- NA
+fb$reminder1 <- fb$row %% 1000 
+fb$reminder2 <- fb$reminder1 %% 100 
+fb[fb$reminder1 < 300 & fb$reminder2 <= 42,]$sb <- "sb1"
+fb[fb$reminder1 < 300 & fb$reminder2 > 42,]$sb <- "sb2"
+fb[fb$reminder1 > 300 & fb$reminder2 <= 42,]$sb <- "sb3"
+fb[fb$reminder1 > 300 & fb$reminder2 > 42,]$sb <- "sb4"
+
+table(fb$sb)
+```
+
+### split-plot-blocks
+```{r}
+fb$spb <- NA
+fb[fb$sb == "sb1" & fb$reminder2 <= 14,]$spb <- "spb1"
+fb[fb$sb == "sb1" & fb$reminder2 > 14 & fb$reminder2 <= 28,]$spb <- "spb2"
+fb[fb$sb == "sb1" & fb$reminder2 > 28 & fb$reminder2 <= 42,]$spb <- "spb3"
+
+fb[fb$sb == "sb2" & fb$reminder2 > 42 & fb$reminder2 <= 56,]$spb <- "spb1"
+fb[fb$sb == "sb2" & fb$reminder2 > 56 & fb$reminder2 <= 70,]$spb <- "spb2"
+fb[fb$sb == "sb2" & fb$reminder2 > 70 & fb$reminder2 <= 84,]$spb <- "spb3"
+
+fb[fb$sb == "sb3" & fb$reminder2 <= 14,]$spb <- "spb1"
+fb[fb$sb == "sb3" & fb$reminder2 > 14 & fb$reminder2 <= 28,]$spb <- "spb2"
+fb[fb$sb == "sb3" & fb$reminder2 > 28 & fb$reminder2 <= 42,]$spb <- "spb3"
+
+fb[fb$sb == "sb4" & fb$reminder2 > 42 & fb$reminder2 <= 56,]$spb <- "spb1"
+fb[fb$sb == "sb4" & fb$reminder2 > 56 & fb$reminder2 <= 70,]$spb <- "spb2"
+fb[fb$sb == "sb4" & fb$reminder2 > 70 & fb$reminder2 <= 84,]$spb <- "spb3"
+
+table(fb$spb)
+table(subset(fb, sb=="sb4")$spb)
+
+write.table(fb, "cache/fb2019_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+### Test
+
+3000s is a low nitrogen field. find the sb4 and spb1 in plot 3000s,
+- should be > 3343
+- should contain two row of "checks"
+```{r}
+test1 <- subset(fb, block == "B2" & nitrogen =="-N" & sb=="sb4" & spb=="spb1")
+sum(test1$genotype == "check")
+```
+
+
+After planting, the empty plots (no gemination) were replaced with checks.
+
+
+
+```{r}
+fb <- read.csv("cache/fb2019_meta.csv")
+
+### file withplots replaced with checks:
+ch <- read.csv("data/CRRI_2019_Field_Book_Christine.csv")
+
+fb2 <- merge(fb[, -4:-5], ch, by.x="row", by.y="Row")
+
+write.table(fb2[, -13:-14], "cache/fb2019_meta_replaced_check.csv", sep=",", row.names = FALSE, quote=FALSE)
+```

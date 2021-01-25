@@ -1,0 +1,100 @@
+---
+title: "2018 Field design"
+output: NULL
+author: "Semra Palali Delen"
+date: 01-25-2021
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+# Nomenclature for the field design
+
+In 2018, we used the same design with 2 checks
+
+1. Two blocks (East, West), low and high N plot in each block.
+2. 4 split-plots per block by height and flowering time (tall/early, tall/late, short/early, short/late)
+split plots, subdivided into 3 incomplete split-plot-blocks
+3x8 = 24 subplots per split plot block
+
+## Dimensions:
+
+1. Plot: 120 ft x 240 ft
+2. subplot 20 ft x 5 ft, 288 subplots per plot and 72 subplots per split plot
+17.5 feet would give us 20 foot plots with 30 inches between varieties.
+
+----------------
+
+# Seed sources:
+
+
+```{r}
+fb18 <- read.csv("data/fb2018_JY_282_4plots.csv")
+#View(fb18)
+```
+
+### Two blocks
+```{r}
+fb18$block <- "B1"
+fb18[fb18$row > 3000,]$block <- "B2"
+
+fb18$nitrogen <- "+N"
+fb18[fb18$row > 2000 & fb18$row < 4000, ]$nitrogen <- "-N"
+
+```
+
+
+
+### four split-blocks per block
+
+```{r}
+fb18$sb <- NA
+fb18$reminder1 <- fb18$row %% 1000 
+fb18$reminder2 <- fb18$reminder1 %% 100 
+fb18[fb18$reminder1 < 300 & fb18$reminder2 <= 48,]$sb <- "sb1"
+fb18[fb18$reminder1 < 300 & fb18$reminder2 > 48,]$sb <- "sb2"
+fb18[fb18$reminder1 > 300 & fb18$reminder2 <= 48,]$sb <- "sb3"
+fb18[fb18$reminder1 > 300 & fb18$reminder2 > 48,]$sb <- "sb4"
+
+table(fb18$sb)
+```
+
+### split-plot-blocks
+```{r}
+fb18$spb <- NA
+fb18[fb18$sb == "sb1" & fb18$reminder2 <= 16,]$spb <- "spb1"
+fb18[fb18$sb == "sb1" & fb18$reminder2 > 16 & fb18$reminder2 <= 32,]$spb <- "spb2"
+fb18[fb18$sb == "sb1" & fb18$reminder2 > 32 & fb18$reminder2 <= 48,]$spb <- "spb3"
+
+fb18[fb18$sb == "sb2" & fb18$reminder2 > 48 & fb18$reminder2 <= 64,]$spb <- "spb1"
+fb18[fb18$sb == "sb2" & fb18$reminder2 > 64 & fb18$reminder2 <= 80,]$spb <- "spb2"
+fb18[fb18$sb == "sb2" & fb18$reminder2 > 80 & fb18$reminder2 <= 96,]$spb <- "spb3"
+
+fb18[fb18$sb == "sb3" & fb18$reminder2 <= 16,]$spb <- "spb1"
+fb18[fb18$sb == "sb3" & fb18$reminder2 > 16 & fb18$reminder2 <= 32,]$spb <- "spb2"
+fb18[fb18$sb == "sb3" & fb18$reminder2 > 32 & fb18$reminder2 <= 48,]$spb <- "spb3"
+
+fb18[fb18$sb == "sb4" & fb18$reminder2 > 48 & fb18$reminder2 <= 64,]$spb <- "spb1"
+fb18[fb18$sb == "sb4" & fb18$reminder2 > 64 & fb18$reminder2 <= 80,]$spb <- "spb2"
+fb18[fb18$sb == "sb4" & fb18$reminder2 > 80 & fb18$reminder2 <= 96,]$spb <- "spb3"
+
+table(fb18$spb)
+table(subset(fb18, sb=="sb4")$spb)
+
+
+
+fb18$Rep <- "1"
+fb18[fb18$row > 3000,]$Rep <- "2"
+
+write.table(fb18[, -16:-17], "cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+fb18_meta <- read.csv("cache/fb2018_meta.csv")
+View(fb18_meta)
+
+#nrow(fb18)
+
+```
+
