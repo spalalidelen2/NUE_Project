@@ -7,7 +7,7 @@ date: 01-25-2021
 
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE) 
-knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
 #library(tidyverse)
 ```
 
@@ -34,7 +34,7 @@ split plots, subdivided into 3 incomplete split-plot-blocks
 
 
 ```{r}
-fb <- read.csv("data/fb2019_JY_282_4plots_havelock_final.csv")
+fb <- read.csv("../data/fb2019_JY_282_4plots_havelock_final.csv")
 ```
 
 ### Two blocks
@@ -85,7 +85,7 @@ fb[fb$sb == "sb4" & fb$reminder2 > 70 & fb$reminder2 <= 84,]$spb <- "spb3"
 table(fb$spb)
 table(subset(fb, sb=="sb4")$spb)
 
-write.table(fb, "cache/fb2019_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb, "../cache/fb2019_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 ### Test
@@ -104,12 +104,12 @@ After planting, the empty plots (no gemination) were replaced with checks.
 
 
 ```{r}
-fb <- read.csv("cache/fb2019_meta.csv")
+fb <- read.csv("../cache/fb2019_meta.csv")
 
 ### file withplots replaced with checks:
-ch <- read.csv("data/CRRI_2019_Field_Book_Christine.csv")
+ch <- read.csv("../data/CRRI_2019_Field_Book_Christine.csv")
 
 fb2 <- merge(fb[, -4:-5], ch, by.x="row", by.y="Row")
 
-write.table(fb2[, -13:-14], "cache/fb2019_meta_replaced_check.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb2[, -13:-14], "../cache/fb2019_meta_replaced_check.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```

@@ -32,7 +32,7 @@ split plots, subdivided into 3 incomplete split-plot-blocks
 
 
 ```{r}
-fb18 <- read.csv("data/fb2018_JY_282_4plots.csv")
+fb18 <- read.csv("../data/fb2018_JY_282_4plots.csv")
 #View(fb18)
 ```
 
@@ -89,9 +89,9 @@ table(subset(fb18, sb=="sb4")$spb)
 fb18$Rep <- "1"
 fb18[fb18$row > 3000,]$Rep <- "2"
 
-write.table(fb18[, -16:-17], "cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb18[, -16:-17], "../cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
 
-fb18_meta <- read.csv("cache/fb2018_meta.csv")
+fb18_meta <- read.csv("../cache/fb2018_meta.csv")
 View(fb18_meta)
 
 #nrow(fb18)

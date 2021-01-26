@@ -1,0 +1,323 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+
+### 2018 DATA
+```{r}
+#install.packages("readxl")
+library(tidyverse)
+library(readxl)
+ph_2018 <- read.csv("data/copy of organized phenotyping data for heritability copy2.csv")
+#View(ph_2018)
+names(ph_2018)
+ph_2018 %>% 
+  mutate(pollinationtype = NA, 
+         pollinationtype=ifelse(grepl("@",Genotype),"self",pollinationtype),
+         pollinationtype=ifelse(grepl("op",tolower(Genotype)),"open",pollinationtype),
+         Genotype=gsub("op","",tolower(Genotype)),
+         Genotype=gsub("@","",tolower(Genotype)),
+         Genotype = str_squish(Genotype)) %>% 
+  arrange(Genotype) %>% 
+  filter(pollinationtype == "open") %>% 
+  rename(genotype = Genotype,
+         year = Year) -> ph_2018.b
+```
+
+
+```{r}
+ph_2018.b %>% 
+  select(genotype, Average.cob.length, Replication, Row) %>% 
+  rename(AverageCobLength = `Average.cob.length`) %>% 
+  rename(row = `Row`)%>% 
+  arrange(genotype) %>% 
+  mutate(year = 2018) %>% 
+  arrange(genotype) ->  cobl_2018 
+  # group_by(genotype) %>% 
+  # summarise(meanAvgCob2018 = mean(cobLength2018),
+  #           sdAvgCob2018 = sd(cobLength2018))
+  
+```
+
+
+
+```{r}
+#View(ph_2018.b)
+colnames(ph_2018.b)
+ph_2018.b %>%
+  rename(row = Row)
+colnames(ph_2018.b)[colnames(ph_2018.b) == "Row"] <- "row"
+colnames(ph_2018.b)[colnames(ph_2018.b) == "genotype"] <- "Genotype" 
+head(ph_2018.b)
+unique(ph_2018.b$Genotype)
+```
+
+
+## Burdan duzenle
+
+
+```{r}
+ph_2018.b$meancw <- apply(ph_2018.b[, c("Cob.length.1", "Cob.length.2", "Cob.length.3", "Cob.length.4", "Cob.length.5", "Cob.length.6", "Cob.length.7", "Cob.Length.8")], 1, function(x){mean(x, na.rm=TRUE)})
+ph_2018.b$Average.cob.length <- as.numeric(as.character(ph_2018.b$Average.cob.length))
+
+plot(ph_2018.b$Average.cob.length, ph_2018.b$meancw)
+idx <- which(round(ph_2018.b$Average.cob.length, 1) != round(ph_2018.b$meancw, 1))
+cw[idx,]
+```
+
+# Merge the CW with the meta data
+
+```{r}
+#meta data for 2018
+fb <- read.csv("cache/fb2018_meta.csv")
+fb$quadrant <- floor(fb$row/1000)
+#View(fb)
+
+
+#cw$row <- gsub("-.*", "", cw$Line.number) 
+#fb1 <- subset(fb, row %% 2 == 1)
+
+#ph_2018.b$Row <- gsub("-.*", "", cw$Line.number) 
+fb1 <- subset(fb, row %% 2 == 1)
+
+## remove duplicated rows
+idx <- duplicated(ph_2018.b$row)
+sub1 <- subset(ph_2018.b, row %in% ph_2018.b[idx,]$row)
+
+cw1 <- subset(ph_2018.b, !(row %in% ph_2018.b[idx,]$row))
+
+
+fb1cw <- merge(fb1, cw1[, c("row", "meancw")], by="row", all.x=TRUE)
+View(fb1cw)
+
+colnames(fb1cw)[colnames(fb1cw) == "pedigree"] <- "Pedigree"
+colnames(fb1cw)[colnames(fb1cw) == "genotype"] <- "Genotype"
+
+
+write.table(fb1cw[, -6], "cache/pheno2018_coblength.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+write.table(subset(fb1cw[, -6], nitrogen %in% "+N"), "cache/pheno2018_coblength_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -6], nitrogen %in% "-N"), "cache/pheno2018_coblength_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+```
+
+# Quality checking
+
+```{r}
+# how many of the non-check plots have no data
+nonch <- subset(fb1cw, !(Genotype %in% "Check"))
+sum(is.na(nonch$meancw))
+
+nonch_data <- subset(nonch, !is.na(meancw))
+
+t.test(subset(fb1cw, quadrant %in% "1")$meancw, subset(fb1cw, quadrant %in% "2")$meancw, na.rm=TRUE)
+
+t.test(subset(fb1cw, quadrant %in% "3")$meancw, subset(fb1cw, quadrant %in% "4")$meancw, na.rm=TRUE)
+```
+
+```{r}
+library(ggplot2)
+fsize=16
+p1 <- ggplot(fb1cw, aes(x=meancw, color=as.factor(quadrant))) +
+      facet_grid(block ~ nitrogen) +
+      geom_histogram(bins=30) +
+      #labs(y=NULL, fill="Traits") + theme_bw() +
+      theme(#axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+          axis.text=element_text(size=12),
+          axis.title=element_text(size=fsize, face="bold"),
+          legend.title = element_text(size=fsize, face="bold"),
+          legend.text = element_text(size=fsize),
+          strip.text = element_text(size = fsize, face = "bold")) +
+      xlab("Cob Length") +
+      ylab("Frequency")
+p1
+```
+
+
+### 2019 DATA
+# Use Cob Width data as an example
+
+```{r}
+fb <- read.csv("cache/fb2019_meta_replaced_check.csv")
+fb$quadrant <- floor(fb$row/1000) 
+#View(fb)
+cw <- read.csv("data/phenotyping_2019_semra_coblength.csv")
+table(cw$Number.of.ears)
+#View(cw)
+```
+
+
+```{r}
+cw$meancw <- apply(cw[, c("Cob.length.1", "Cob.length.2", "Cob.length.3", "Cob.length.4", "Cob.length.5", "Cob.length.6", "Cob.length.7", "Cob.length.8", "Cob.length.9")], 1, function(x){mean(x, na.rm=TRUE)})
+
+#View(cw$meancw)
+cw$meancw <- apply(cw[, 3:11], 1, function(x){mean(x, na.rm=TRUE)})
+cw$Average.cob.length <- as.numeric(as.character(cw$Average.cob.length))
+
+plot(cw$Average.cob.length, cw$meancw)
+idx <- which(round(cw$Average.cob.length, 1) != round(cw$meancw, 1))
+cw[idx,]
+```
+
+
+# Merge the CW with the meta data
+
+```{r}
+cw$row <- gsub("-.*", "", cw$Line.number) 
+fb1 <- subset(fb, row %% 2 == 1)
+#View(fb1)
+## remove duplicated rows
+idx <- duplicated(cw$row)
+sub1 <- subset(cw, row %in% cw[idx,]$row)
+
+cw1 <- subset(cw, !(row %in% cw[idx,]$row))
+
+dim(cw1)
+#View(cw1)
+fb1cw <- merge(fb1, cw1[, c("row", "meancw")], by="row", all.x=TRUE)
+#View(fb1cw)
+# Quality checking
+
+
+# how many of the non-check plots have no data
+nonch <- subset(fb1cw, !(Genotype %in% "Check"))
+sum(is.na(nonch$meancw))
+
+nonch_data <- subset(nonch, !is.na(meancw))
+
+t.test(subset(fb1cw, quadrant %in% "1")$meancw, subset(fb1cw, quadrant %in% "2")$meancw, na.rm=TRUE)
+
+t.test(subset(fb1cw, quadrant %in% "3")$meancw, subset(fb1cw, quadrant %in% "4")$meancw, na.rm=TRUE)
+
+
+write.table(fb1cw[, -16], "cache/pheno2019_cl.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+
+write.table(subset(fb1cw[, -16], nitrogen %in% "+N"), "cache/pheno2019_cl_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -16], nitrogen %in% "-N"), "cache/pheno2019_cl_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+
+
+# Quality checking
+
+```{r}
+# how many of the non-check plots have no data
+nonch <- subset(fb1cw, !(Genotype %in% "Check"))
+sum(is.na(nonch$meancw))
+
+nonch_data <- subset(nonch, !is.na(meancw))
+
+t.test(subset(fb1cw, quadrant %in% "1")$meancw, subset(fb1cw, quadrant %in% "2")$meancw, na.rm=TRUE)
+
+t.test(subset(fb1cw, quadrant %in% "3")$meancw, subset(fb1cw, quadrant %in% "4")$meancw, na.rm=TRUE)
+```
+
+```{r}
+library(ggplot2)
+fsize=16
+p2 <- ggplot(fb1cw, aes(x=meancw, color=as.factor(quadrant))) +
+      facet_grid(block ~ nitrogen) +
+      geom_histogram(bins=30) +
+      #labs(y=NULL, fill="Traits") + theme_bw() +
+      theme(#axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+          axis.text=element_text(size=12),
+          axis.title=element_text(size=fsize, face="bold"),
+          legend.title = element_text(size=fsize, face="bold"),
+          legend.text = element_text(size=fsize),
+          strip.text = element_text(size = fsize, face = "bold")) +
+      xlab("Cob Lenght") +
+      ylab("Frequency")
+p2
+```
+
+
+### Merge 2018 and 2019 cob width +N data 
+```{r}
+### first, we need to organize both data set. (they need to have the same columns)
+
+coblength_2019_N <- read.csv("cache/pheno2019_cl_withN.csv")
+
+coblength_2018_N <- read.csv("cache/pheno2018_coblength_withN.csv")
+
+#View(coblength_2019_N)
+#View(coblength_2018_N)
+
+coblength_18_19_N <- rbind(coblength_2018_N, coblength_2019_N)
+View(coblength_18_19_N)
+
+write.table(coblength_18_19_N, "cache/coblength_2018_2019_N.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+
+
+### Merge 2018 and 2019 cob width -N data
+```{r}
+coblength_2018_noN <- read.csv ("cache/pheno2018_coblength_noN.csv")
+coblength_2019_noN <- read.csv ("cache/pheno2019_cl_noN.csv")
+
+coblength_18_19_noN <- rbind (coblength_2018_noN, coblength_2019_noN)
+write.table(coblength_18_19_noN, "cache/coblength_2018_2019_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+
+# Install the package
+
+```{r}
+#install.packages(devtools)
+devtools::install_github("jyanglab/g3tools")
+library(g3tools)
+```
+
+
+# Use Cob Width data as an example
+
+```{r}
+library(lme4)
+#p1 <- read.csv("cache/pheno2019_cw_withN.csv")
+
+get_BLUP(data = coblength_18_19_N, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
+  | Genotype:year), which.factor = "Genotype",
+  outfile = "cache/GWAS_DATA/CobLength_BLUP_2018_2019_withN_lme4.csv")
+
+#df1 <- read.csv("cache/BLUP/CW_BLUP-2019_withN.csv")
+df1 <- read.csv("cache/GWAS_DATA/CobLength_BLUP_2018_2019_withN_lme4.csv")
+
+#cor.test(df1$BLUPs, df2$value)
+
+#plot(df1$BLUPs, df2$value)
+
+#noN
+#p2 <- read.csv("cache/pheno2019_cw_noN.csv")
+
+get_BLUP(data = coblength_18_19_noN, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
+  | Genotype:year), which.factor = "Genotype",
+  outfile = "cache/GWAS_DATA/CobLength_BLUP_2018_2019_noN_lme4.csv")
+
+df2 <- read.csv("cache/GWAS_DATA/CobLength_BLUP_2018_2019_noN_lme4.csv")
+
+#write.table(fb18[, -16:-17], "cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+
+#cor.test(df1$value[c(2:215)], df2$value[c(2:215)])
+
+#plot(df1$value[c(2:215)], df2$value[c(2:215)])
+```
+
+```{r}
+
+hist(df1$value, breaks=25, col="#6495ed", xlab="Cob length in +N in 2018-2019", ylab="freq", main="histogram")
+
+
+hist(df2$value, breaks=25, col="#c6e2ff", xlab="Cob length in -N in 2018-2019", ylab="freq", main="histogram")
+
+t.test(df1$value, df2$value)
+```
+
