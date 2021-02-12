@@ -5,7 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
 ```
 
 
@@ -15,7 +15,7 @@ knitr::opts_knit$set(root.dir=normalizePath('../../'))
 #install.packages("readxl")
 library(tidyverse)
 library(readxl)
-ph_2018 <- read.csv("data/copy of organized phenotyping data for heritability copy2.csv")
+ph_2018 <- read.csv("../data/phenotyping_2018_semra_all_traits.csv")
 #View(ph_2018)
 names(ph_2018)
 ph_2018 %>% 
@@ -76,7 +76,7 @@ cw[idx,]
 
 ```{r}
 #meta data for 2018
-fb <- read.csv("cache/fb2018_meta.csv")
+fb <- read.csv("../cache/fb2018_meta.csv")
 fb$quadrant <- floor(fb$row/1000)
 #View(fb)
 
@@ -101,10 +101,13 @@ colnames(fb1cw)[colnames(fb1cw) == "pedigree"] <- "Pedigree"
 colnames(fb1cw)[colnames(fb1cw) == "genotype"] <- "Genotype"
 
 
-write.table(fb1cw[, -6], "cache/pheno2018_coblength.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb1cw[, -6], "../cache/pheno2018_coblength.csv", sep=",", row.names = FALSE, quote=FALSE)
 
-write.table(subset(fb1cw[, -6], nitrogen %in% "+N"), "cache/pheno2018_coblength_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
-write.table(subset(fb1cw[, -6], nitrogen %in% "-N"), "cache/pheno2018_coblength_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write_xlsx(fb1cw, "../cache/pheno2018_cob_length.xlsx")
+
+
+write.table(subset(fb1cw[, -6], nitrogen %in% "+N"), "../cache/pheno2018_cob_length_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -6], nitrogen %in% "-N"), "../cache/pheno2018_cob_length_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
 
 ```
 
@@ -145,12 +148,12 @@ p1
 # Use Cob Width data as an example
 
 ```{r}
-fb <- read.csv("cache/fb2019_meta_replaced_check.csv")
+fb <- read.csv("../cache/fb2019_meta_replaced_check.csv")
 fb$quadrant <- floor(fb$row/1000) 
 #View(fb)
-cw <- read.csv("data/phenotyping_2019_semra_coblength.csv")
+cw <- read.csv("../data/phenotyping_2019_semra_coblength_raw.csv")
 table(cw$Number.of.ears)
-#View(cw)
+View(cw)
 ```
 
 
@@ -158,7 +161,7 @@ table(cw$Number.of.ears)
 cw$meancw <- apply(cw[, c("Cob.length.1", "Cob.length.2", "Cob.length.3", "Cob.length.4", "Cob.length.5", "Cob.length.6", "Cob.length.7", "Cob.length.8", "Cob.length.9")], 1, function(x){mean(x, na.rm=TRUE)})
 
 #View(cw$meancw)
-cw$meancw <- apply(cw[, 3:11], 1, function(x){mean(x, na.rm=TRUE)})
+cw$meancw <- apply(cw[, 7:15], 1, function(x){mean(x, na.rm=TRUE)})
 cw$Average.cob.length <- as.numeric(as.character(cw$Average.cob.length))
 
 plot(cw$Average.cob.length, cw$meancw)
@@ -170,7 +173,7 @@ cw[idx,]
 # Merge the CW with the meta data
 
 ```{r}
-cw$row <- gsub("-.*", "", cw$Line.number) 
+cw$row <- gsub("-.*", "", cw$Row.number) 
 fb1 <- subset(fb, row %% 2 == 1)
 #View(fb1)
 ## remove duplicated rows
@@ -197,11 +200,13 @@ t.test(subset(fb1cw, quadrant %in% "1")$meancw, subset(fb1cw, quadrant %in% "2")
 t.test(subset(fb1cw, quadrant %in% "3")$meancw, subset(fb1cw, quadrant %in% "4")$meancw, na.rm=TRUE)
 
 
-write.table(fb1cw[, -16], "cache/pheno2019_cl.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb1cw[, -16], "../cache/pheno2019_cob_length.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+write_xlsx(fb1cw, "../cache/pheno2019_cob_length.xlsx")
 
 
-write.table(subset(fb1cw[, -16], nitrogen %in% "+N"), "cache/pheno2019_cl_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
-write.table(subset(fb1cw[, -16], nitrogen %in% "-N"), "cache/pheno2019_cl_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -16], nitrogen %in% "+N"), "../cache/pheno2019_cob_length_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -16], nitrogen %in% "-N"), "../cache/pheno2019_cob_length_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 
@@ -243,9 +248,9 @@ p2
 ```{r}
 ### first, we need to organize both data set. (they need to have the same columns)
 
-coblength_2019_N <- read.csv("cache/pheno2019_cl_withN.csv")
+coblength_2019_N <- read.csv("../cache/pheno2019_cob_length_withN.csv")
 
-coblength_2018_N <- read.csv("cache/pheno2018_coblength_withN.csv")
+coblength_2018_N <- read.csv("../cache/pheno2018_cob_length_withN.csv")
 
 #View(coblength_2019_N)
 #View(coblength_2018_N)
@@ -253,18 +258,18 @@ coblength_2018_N <- read.csv("cache/pheno2018_coblength_withN.csv")
 coblength_18_19_N <- rbind(coblength_2018_N, coblength_2019_N)
 View(coblength_18_19_N)
 
-write.table(coblength_18_19_N, "cache/coblength_2018_2019_N.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(coblength_18_19_N, "../cache/cob_length_2018_2019_N.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 
 
 ### Merge 2018 and 2019 cob width -N data
 ```{r}
-coblength_2018_noN <- read.csv ("cache/pheno2018_coblength_noN.csv")
-coblength_2019_noN <- read.csv ("cache/pheno2019_cl_noN.csv")
+coblength_2018_noN <- read.csv ("../cache/pheno2018_cob_length_noN.csv")
+coblength_2019_noN <- read.csv ("../cache/pheno2019_cob_length_noN.csv")
 
 coblength_18_19_noN <- rbind (coblength_2018_noN, coblength_2019_noN)
-write.table(coblength_18_19_noN, "cache/coblength_2018_2019_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(coblength_18_19_noN, "../cache/cob_length_2018_2019_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 
@@ -285,10 +290,10 @@ library(lme4)
 
 get_BLUP(data = coblength_18_19_N, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
   | Genotype:year), which.factor = "Genotype",
-  outfile = "cache/GWAS_DATA/CobLength_BLUP_2018_2019_withN_lme4.csv")
+  outfile = "../cache/BLUP_RESULTS/cob_length_BLUP_2018_2019_withN_lme4.csv")
 
 #df1 <- read.csv("cache/BLUP/CW_BLUP-2019_withN.csv")
-df1 <- read.csv("cache/GWAS_DATA/CobLength_BLUP_2018_2019_withN_lme4.csv")
+nit <- read.csv("../cache/BLUP_RESULTS/cob_length_BLUP_2018_2019_withN_lme4.csv")
 
 #cor.test(df1$BLUPs, df2$value)
 
@@ -299,9 +304,9 @@ df1 <- read.csv("cache/GWAS_DATA/CobLength_BLUP_2018_2019_withN_lme4.csv")
 
 get_BLUP(data = coblength_18_19_noN, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
   | Genotype:year), which.factor = "Genotype",
-  outfile = "cache/GWAS_DATA/CobLength_BLUP_2018_2019_noN_lme4.csv")
+  outfile = "../cache/BLUP_RESULTS/cob_length_BLUP_2018_2019_noN_lme4.csv")
 
-df2 <- read.csv("cache/GWAS_DATA/CobLength_BLUP_2018_2019_noN_lme4.csv")
+nonit <- read.csv("../cache/BLUP_RESULTS/cob_length_BLUP_2018_2019_noN_lme4.csv")
 
 #write.table(fb18[, -16:-17], "cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
 
@@ -313,11 +318,58 @@ df2 <- read.csv("cache/GWAS_DATA/CobLength_BLUP_2018_2019_noN_lme4.csv")
 
 ```{r}
 
-hist(df1$value, breaks=25, col="#6495ed", xlab="Cob length in +N in 2018-2019", ylab="freq", main="histogram")
+hist(nit$value, breaks=25, col="#6495ed", xlab="Cob length in +N in 2018-2019", ylab="freq", main="histogram")
 
 
-hist(df2$value, breaks=25, col="#c6e2ff", xlab="Cob length in -N in 2018-2019", ylab="freq", main="histogram")
+hist(nonit$value, breaks=25, col="#c6e2ff", xlab="Cob length in -N in 2018-2019", ylab="freq", main="histogram")
 
-t.test(df1$value, df2$value)
+t.test(nit$value, nonit$value)
 ```
 
+
+##Box Plot
+```{r}
+library(tidyr)
+library(ggplot2)
+
+
+#setting names
+names(nonit) <-c("Genotype","BLUP_noN")
+names(nit) <- c("Genotype","BLUP_N")
+
+#checking if data is read in correctly
+head(nonit)
+head(nit)
+
+#different dimensions show that there are some genotypes in the noN treatment that are in N treatment
+
+dim(nonit)
+dim(nit)
+
+#merging the two data sets. all=T means that we include the genotypes that only have 1 data point.
+combined<- merge.data.frame(nonit,nit,by="Genotype",all=T)
+
+#convert from wide to long
+
+combinedlong <- gather(combined,Nitrogen,BLUP,c("BLUP_noN","BLUP_N"),factor_key = T)
+
+plot <- ggplot(data=combinedlong,aes(x=Nitrogen,y=BLUP)) + 
+        geom_boxplot(outlier.colour="red",notch=T) #red color for outliers, notch=T just means there is a curve in the box plot. Change to notch=F to get a simple box
+plot <- plot + scale_x_discrete(labels=c("-N","+N")) + #x-labels
+               labs(title="Cob Length BLUP Boxplots", 
+                    xlab="Nitrogen Application",ylab="BLUP") #title and axis labels
+plot <- plot + theme(panel.grid.major = element_blank(), 
+                     panel.grid.minor = element_blank(),
+                     panel.background = element_blank(), 
+                     axis.line = element_line(colour = "black"),
+                     #legend.text = element_text(size=13,face="bold"), #for legends
+                     #legend.title = element_text(size=13, face="bold"), #for legends
+                     axis.title.x = element_text(size=18,face="bold"), #format for x-axis
+                     axis.title.y = element_text(size=18,face="bold"), #format for y-axis
+                     axis.text = element_text(size=18), #format for title
+                     plot.margin = unit(c(1,1,1,1),"cm"))#,
+                     #legend.position = c(0.8, .75)) #for legend
+                      
+plot
+
+```

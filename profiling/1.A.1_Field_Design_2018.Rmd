@@ -7,8 +7,8 @@ date: 01-25-2021
 
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE) 
-knitr::opts_knit$set(root.dir=normalizePath('../../')) 
-#library(tidyverse)
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+library(tidyverse)
 ```
 
 # Nomenclature for the field design
@@ -92,7 +92,7 @@ fb18[fb18$row > 3000,]$Rep <- "2"
 write.table(fb18[, -16:-17], "../cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
 
 fb18_meta <- read.csv("../cache/fb2018_meta.csv")
-View(fb18_meta)
+#View(fb18_meta)
 
 #nrow(fb18)
 

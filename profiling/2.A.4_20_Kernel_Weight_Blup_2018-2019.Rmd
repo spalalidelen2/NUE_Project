@@ -5,7 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
 ```
 
 
@@ -15,7 +15,7 @@ knitr::opts_knit$set(root.dir=normalizePath('../../'))
 #install.packages("readxl")
 library(tidyverse)
 library(readxl)
-ph_2018 <- read.csv("data/copy of organized phenotyping data for heritability copy2.csv")
+ph_2018 <- read.csv("../data/phenotyping_2018_semra_all_traits.csv")
 #View(ph_2018)
 names(ph_2018)
 ph_2018 %>% 
@@ -66,13 +66,14 @@ unique(ph_2018.b$Genotype)
 ```{r}
 ph_2018.b$Weight.of.20.seeds <- as.numeric(as.character(ph_2018.b$Weight.of.20.seeds))
 
+
 ```
 
 # Merge the CW with the meta data
 
 ```{r}
 #meta data for 2018
-fb <- read.csv("cache/fb2018_meta.csv")
+fb <- read.csv("../cache/fb2018_meta.csv")
 fb$quadrant <- floor(fb$row/1000)
 #View(fb)
 
@@ -97,10 +98,13 @@ colnames(fb1cw)[colnames(fb1cw) == "pedigree"] <- "Pedigree"
 colnames(fb1cw)[colnames(fb1cw) == "genotype"] <- "Genotype"
 
 
-write.table(fb1cw[, -6], "cache/pheno2018_20_kernel_weight.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb1cw[, -6], "../cache/pheno2018_20_kernel_weight.csv", sep=",", row.names = FALSE, quote=FALSE)
 
-write.table(subset(fb1cw[, -6], nitrogen %in% "+N"), "cache/pheno2018_20_kernel_weight_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
-write.table(subset(fb1cw[, -6], nitrogen %in% "-N"), "cache/pheno2018_20_kernel_weight_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write_xlsx(fb1cw, "../cache/pheno2018_20_kernel_weight.xlsx")
+
+
+write.table(subset(fb1cw[, -6], nitrogen %in% "+N"), "../cache/pheno2018_20_kernel_weight_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -6], nitrogen %in% "-N"), "../cache/pheno2018_20_kernel_weight_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
 
 ```
 
@@ -141,10 +145,10 @@ p1
 # Use Cob Width data as an example
 
 ```{r}
-fb <- read.csv("cache/fb2019_meta_replaced_check.csv")
+fb <- read.csv("../cache/fb2019_meta_replaced_check.csv")
 fb$quadrant <- floor(fb$row/1000) 
 #View(fb)
-cw <- read.csv("data/phenotyping_2019_semra_cobwidth_organized.csv")
+cw <- read.csv("../data/phenotyping_2019_semra_cobwidth_raw.csv")
 table(cw$Number.of.ears)
 View(cw)
 ```
@@ -160,7 +164,7 @@ cw$Weight.of.20.seeds <- as.numeric(as.character(cw$Weight.of.20.seeds))
 # Merge the CW with the meta data
 
 ```{r}
-cw$row <- gsub("-.*", "", cw$Line.number) 
+cw$row <- gsub("-.*", "", cw$Row.number) 
 fb1 <- subset(fb, row %% 2 == 1)
 #View(fb1)
 ## remove duplicated rows
@@ -187,11 +191,13 @@ t.test(subset(fb1cw, quadrant %in% "1")$Weight.of.20.seeds, subset(fb1cw, quadra
 t.test(subset(fb1cw, quadrant %in% "3")$Weight.of.20.seeds, subset(fb1cw, quadrant %in% "4")$Weight.of.20.seeds, na.rm=TRUE)
 
 
-write.table(fb1cw[, -16], "cache/pheno2019_20_kernel_weight.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(fb1cw[, -16], "../cache/pheno2019_20_kernel_weight.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+write_xlsx(fb1cw, "../cache/pheno2019_20_kernel_weight.xlsx")
 
 
-write.table(subset(fb1cw[, -16], nitrogen %in% "+N"), "cache/pheno2019_20_kernel_weight_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
-write.table(subset(fb1cw[, -16], nitrogen %in% "-N"), "cache/pheno2019_20_kernel_weight_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -16], nitrogen %in% "+N"), "../cache/pheno2019_20_kernel_weight_withN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(subset(fb1cw[, -16], nitrogen %in% "-N"), "../cache/pheno2019_20_kernel_weight_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 
@@ -233,9 +239,9 @@ p2
 ```{r}
 ### first, we need to organize both data set. (they need to have the same columns)
 
-kernel_weight_2019_N <- read.csv("cache/pheno2019_20_kernel_weight_withN.csv")
+kernel_weight_2019_N <- read.csv("../cache/pheno2019_20_kernel_weight_withN.csv")
 
-kernel_weight_2018_N <- read.csv("cache/pheno2018_20_kernel_weight_withN.csv")
+kernel_weight_2018_N <- read.csv("../cache/pheno2018_20_kernel_weight_withN.csv")
 
 #View(coblength_2019_N)
 #View(coblength_2018_N)
@@ -243,18 +249,18 @@ kernel_weight_2018_N <- read.csv("cache/pheno2018_20_kernel_weight_withN.csv")
 kernel_weight_18_19_N <- rbind(kernel_weight_2018_N, kernel_weight_2019_N)
 #View(cobwidth_18_19)
 
-write.table(kernel_weight_18_19_N, "cache/20_kernel_weight_2018_2019_N.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(kernel_weight_18_19_N, "../cache/20_kernel_weight_2018_2019_N.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 
 
 ### Merge 2018 and 2019 cob width -N data
 ```{r}
-kernel_weight_2018_noN <- read.csv ("cache/pheno2018_20_kernel_weight_noN.csv")
-kernel_weight_2019_noN <- read.csv ("cache/pheno2019_20_kernel_weight_noN.csv")
+kernel_weight_2018_noN <- read.csv ("../cache/pheno2018_20_kernel_weight_noN.csv")
+kernel_weight_2019_noN <- read.csv ("../cache/pheno2019_20_kernel_weight_noN.csv")
 
 kernel_weight_18_19_noN <- rbind (kernel_weight_2018_noN, kernel_weight_2019_noN)
-write.table(coblength_18_19_noN, "cache/20_kernel_weight_2018_2019_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
+write.table(coblength_18_19_noN, "../cache/20_kernel_weight_2018_2019_noN.csv", sep=",", row.names = FALSE, quote=FALSE)
 ```
 
 
@@ -274,10 +280,10 @@ library(lme4)
 #p1 <- read.csv("cache/pheno2019_cw_withN.csv")
 
 get_BLUP(data = kernel_weight_18_19_N , model = Weight.of.20.seeds ~ (1 | Genotype)  + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1| Genotype:year), which.factor = "Genotype",
-  outfile = "cache/GWAS_DATA/20_kernel_weight_BLUP_2018_2019_withN_lme4.csv")
+  outfile = "../cache/BLUP_RESULTS/20_kernel_weight_BLUP_2018_2019_withN_lme4.csv")
 
 #df1 <- read.csv("cache/BLUP/CW_BLUP-2019_withN.csv")
-df1 <- read.csv("cache/GWAS_DATA/20_kernel_weight_BLUP_2018_2019_withN_lme4.csv")
+nit <- read.csv("../cache/BLUP_RESULTS/20_kernel_weight_BLUP_2018_2019_withN_lme4.csv")
 
 #cor.test(df1$BLUPs, df2$value)
 
@@ -287,9 +293,9 @@ df1 <- read.csv("cache/GWAS_DATA/20_kernel_weight_BLUP_2018_2019_withN_lme4.csv"
 #p2 <- read.csv("cache/pheno2019_cw_noN.csv")
 
 get_BLUP(data = kernel_weight_18_19_noN, model = Weight.of.20.seeds ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1| Genotype:year), which.factor = "Genotype",
-  outfile = "cache/GWAS_DATA/20_kernel_weight_BLUP_2018_2019_noN_lme4.csv")
+  outfile = "../cache/BLUP_RESULTS/20_kernel_weight_BLUP_2018_2019_noN_lme4.csv")
 
-df2 <- read.csv("cache/GWAS_DATA/20_kernel_weight_BLUP_2018_2019_noN_lme4.csv")
+nonit <- read.csv("../cache/BLUP_RESULTS/20_kernel_weight_BLUP_2018_2019_noN_lme4.csv")
 
 #write.table(fb18[, -16:-17], "cache/fb2018_meta.csv", sep=",", row.names = FALSE, quote=FALSE)
 
@@ -301,15 +307,65 @@ df2 <- read.csv("cache/GWAS_DATA/20_kernel_weight_BLUP_2018_2019_noN_lme4.csv")
 
 ```{r}
 
-hist(df1$value, breaks=25, col="#6495ed", xlab="20 kernel weight in +N in 2018-2019", ylab="freq", main="histogram")
+hist(nit$value, breaks=25, col="#6495ed", xlab="20 kernel weight in +N in 2018-2019", ylab="freq", main="histogram")
 
 
-hist(df2$value, breaks=25, col="#c6e2ff", xlab="20 kernel weight in -N in 2018-2019", ylab="freq", main="histogram")
+hist(nonit$value, breaks=25, col="#c6e2ff", xlab="20 kernel weight in -N in 2018-2019", ylab="freq", main="histogram")
 
-t.test(df1$value, df2$value)
+t.test(nit$value, nonit$value)
 
 
 ```
+
+## Box Plot
+```{r}
+library(tidyr)
+library(ggplot2)
+
+
+#setting names
+names(nonit) <-c("Genotype","BLUP_noN")
+names(nit) <- c("Genotype","BLUP_N")
+
+#checking if data is read in correctly
+head(nonit)
+head(nit)
+
+#different dimensions show that there are some genotypes in the noN treatment that are in N treatment
+
+dim(nonit)
+dim(nit)
+
+#merging the two data sets. all=T means that we include the genotypes that only have 1 data point.
+combined<- merge.data.frame(nonit,nit,by="Genotype",all=T)
+
+#convert from wide to long
+
+combinedlong <- gather(combined,Nitrogen,BLUP,c("BLUP_noN","BLUP_N"),factor_key = T)
+
+plot <- ggplot(data=combinedlong,aes(x=Nitrogen,y=BLUP)) + 
+        geom_boxplot(outlier.colour="red",notch=T) #red color for outliers, notch=T just means there is a curve in the box plot. Change to notch=F to get a simple box
+plot <- plot + scale_x_discrete(labels=c("-N","+N")) + #x-labels
+               labs(title="20 Kernel Weight BLUP Boxplots", 
+                    xlab="Nitrogen Application",ylab="BLUP") #title and axis labels
+plot <- plot + theme(panel.grid.major = element_blank(), 
+                     panel.grid.minor = element_blank(),
+                     panel.background = element_blank(), 
+                     axis.line = element_line(colour = "black"),
+                     #legend.text = element_text(size=13,face="bold"), #for legends
+                     #legend.title = element_text(size=13, face="bold"), #for legends
+                     axis.title.x = element_text(size=18,face="bold"), #format for x-axis
+                     axis.title.y = element_text(size=18,face="bold"), #format for y-axis
+                     axis.text = element_text(size=18), #format for title
+                     plot.margin = unit(c(1,1,1,1),"cm"))#,
+                     #legend.position = c(0.8, .75)) #for legend
+                      
+plot
+
+```
+
+
+
 
 ## How to scale all datasets!
 

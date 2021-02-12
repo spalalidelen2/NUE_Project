@@ -1,0 +1,577 @@
+row,I,year,Pedigree,Genotype,field,experiment,pheno,K,DNA,field_note,block,nitrogen,sb,spb,Rep,quadrant,Weight.of.20.seeds
+1001,JY,2018,Ames 27093,CML311,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1003,JY,2018,PI 406112,A214N,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1005,JY,2018,PI 595565,CML287,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,1.7
+1007,JY,2018,Ames 27094,CML314,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,4.9
+1009,JY,2018,Ames 27102,CML341,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb1,1,1,4.8
+1013,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1015,JY,2018,Ames 27088,CML228,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1017,JY,2018,Ames 10248,GA209,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1019,JY,2018,Ames 27144,NC296,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1021,JY,2018,Ames 27080,CML92,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1023,JY,2018,PI 587144,Mo24W,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,7.6
+1025,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,6.1
+1027,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb2,1,1,5.3
+1029,JY,2018,Ames 27079,CML91,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,7.4
+1031,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb2,1,1,5.2
+1033,JY,2018,Ames 27189,SC55,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,5.6
+1035,JY,2018,PI 506255,Tzi25,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,6.5
+1037,JY,2018,PI 506248,Tzi10,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1039,JY,2018,PI 506253,Tzi18,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,5.3
+1041,JY,2018,Ames 26808,Ill.Hy,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,5.9
+1043,JY,2018,Ames 27166,NC340,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,7.6
+1045,JY,2018,PI 587136,Ky228,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,5.1
+1047,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,4.6
+1049,JY,2018,PI 587140,A632,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,6.4
+1051,JY,2018,PI 587143,A682,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,4.8
+1053,JY,2018,PI 594046,B103,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,NA
+1055,JY,2018,Ames 19309,A635,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,3.8
+1057,JY,2018,PI 607521,A661,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,4.4
+1059,JY,2018,Ames 27068,CH9,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,3.4
+1061,JY,2018,PI 587141,A654,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,NA
+1063,JY,2018,PI 550440,B64,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,5.5
+1065,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,4.9
+1067,JY,2018,Ames 27111,EP1,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,6.1
+1069,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,5.7
+1071,JY,2018,Ames 19316,CM174,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.3
+1073,JY,2018,PI 587124,CM105,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,6.6
+1075,JY,2018,Ames 27135,MEF156-55-2,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,NA
+1077,JY,2018,Ames 27105,CO106,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.9
+1079,JY,2018,Ames 27070,CM7,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,4.5
+1081,JY,2018,Ames 27161,NC330,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,NA
+1083,JY,2018,PI 550490,ND246,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,2.6
+1085,JY,2018,Ames 19326,R168,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,3.3
+1087,JY,2018,Ames 27196,Yu796_NS,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,NA
+1089,JY,2018,Ames 19330,W182B,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,3.4
+1091,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb3,1,1,3.5
+1093,JY,2018,PI 531085,NC262,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,5.3
+1095,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb3,1,1,6.1
+1101,JY,2018,Ames 27085,CML158Q,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1103,JY,2018,Ames 27071,CML5,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1105,JY,2018,PI 595542,CML254,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1107,JY,2018,Ames 27072,CML10,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1109,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,4.9
+1111,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb1,1,1,NA
+1113,JY,2018,Ames 27095,CML321,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1115,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb1,1,1,5.1
+1117,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb2,1,1,NA
+1119,JY,2018,NSL 30038,K4,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1121,JY,2018,Ames 27155,NC318,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,3.3
+1123,JY,2018,NSL 22893,F44,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,3.7
+1125,JY,2018,Ames 27078,CML61,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1127,JY,2018,Ames 28184,CML69,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1129,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,5.3
+1131,JY,2018,Ames 27156,NC320,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,5.3
+1133,JY,2018,PI 550522,T232,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,7.1
+1135,JY,2018,PI 506246,Tzi8,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1137,JY,2018,Ames 27169,NC346,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1139,JY,2018,PI 587145,NC268,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1141,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb3,1,1,5.5
+1143,JY,2018,PI 587137,Ms71,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,5.9
+1145,JY,2018,Ames 22763,Tx601,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1147,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb3,1,1,4.3
+1149,JY,2018,Ames 19308,A634,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,5.8
+1151,JY,2018,NSL 81599,A659,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,6.4
+1153,JY,2018,Ames 23405,A239,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,5.4
+1155,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb1,1,1,NA
+1157,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb1,1,1,3.6
+1159,JY,2018,Ames 23450,A556,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,4.1
+1161,JY,2018,PI 587139,A619,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,2.4
+1163,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,6.2
+1165,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb2,1,1,NA
+1167,JY,2018,PI 583352,Mo47,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.7
+1169,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb2,1,1,4.5
+1171,JY,2018,PI 550566,N192,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,4.7
+1173,JY,2018,Ames 24734,MS153,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,5
+1175,JY,2018,Ames 27104,CMV3,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.3
+1177,JY,2018,Ames 20190,CM37,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,4.7
+1179,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb2,1,1,4.8
+1181,JY,2018,Ames 27152,NC312,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4.5
+1183,JY,2018,PI 524969,SD44,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4
+1185,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,NA
+1187,JY,2018,Ames 27150,NC308,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4.9
+1189,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,6.4
+1191,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb3,1,1,NA
+1193,JY,2018,Ames 27183,Oh43E,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,2.9
+1195,JY,2018,PI 587154,W153R,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4.9
+1201,JY,2018,Ames 27101,CML333,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1203,JY,2018,Ames 27086,CML218,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1205,JY,2018,Ames 27082,CML108,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1207,JY,2018,PI 595550,CML277,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1209,JY,2018,Ames 27090,CML258,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1211,JY,2018,Ames 27074,CML14,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1213,JY,2018,Ames 26604,38-11,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,4.6
+1215,JY,2018,Ames 27091,CML261,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb1,1,1,NA
+1217,JY,2018,Ames 27110,E2558W,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1219,JY,2018,PI 595561,CML52,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1221,JY,2018,Ames 27108,D940Y,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1223,JY,2018,Ames 27121,K64,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,4.9
+1225,JY,2018,Ames 27113,GT112,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1227,JY,2018,Ames 27139,NC33,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1229,JY,2018,NSL 22894,F6,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,NA
+1231,JY,2018,Ames 12729,NC222,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb2,1,1,5.3
+1233,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb1,spb3,1,1,5.8
+1235,JY,2018,PI 558520,Mo1W,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,3.1
+1237,JY,2018,PI 587147,Pa91,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,5.2
+1239,JY,2018,Ames 27136,Mo.G,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,6.3
+1241,JY,2018,PI 540745,Tzi11,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1243,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,NA
+1245,JY,2018,PI 506247,Tzi9,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,6.8
+1247,JY,2018,Ames 27179,NC366,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb1,spb3,1,1,6.7
+1249,JY,2018,PI 587138,A554,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,3.3
+1251,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb2,spb1,1,1,NA
+1253,JY,2018,Ames 19313,C123,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,4.1
+1255,JY,2018,Ames 22443,A188,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,4.6
+1257,JY,2018,PI 608774,B75,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,5.1
+1259,JY,2018,Ames 27067,C49A,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,4.6
+1261,JY,2018,PI 550483,B76,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,5.3
+1263,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb1,1,1,8.1
+1265,JY,2018,PI 587129,H99,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.4
+1267,JY,2018,NSL 30867,M14,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.5
+1269,JY,2018,Ames 20140,Mt42,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.2
+1271,JY,2018,Ames 27107,CO255,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,NA
+1273,JY,2018,PI 257507,F7,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,3.1
+1275,JY,2018,PI 587127,H105W,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,NA
+1277,JY,2018,Ames 27106,CO125,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,NA
+1279,JY,2018,Ames 24752,MS1334,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb2,1,1,5.6
+1281,JY,2018,PI 587150,Va35,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,NA
+1283,JY,2018,Ames 19016,Va59,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4.6
+1285,JY,2018,Ames 27142,NC292,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,NA
+1287,JY,2018,Ames 19288,Oh43,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,3.8
+1289,JY,2018,Ames 27162,NC332,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4.3
+1291,JY,2018,Ames 27154,NC316,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,4.4
+1293,JY,2018,Ames 27137,N6,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,3.7
+1295,JY,2018,Ames 19000,VaW6,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb2,spb3,1,1,6.6
+1301,JY,2018,PI 550465,B68,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,NA
+1303,JY,2018,Ames 27069,CH701-30,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,NA
+1305,JY,2018,PI 550473,B73,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,4.2
+1307,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb1,1,1,2.8
+1309,JY,2018,PI 550469,B46,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,5.6
+1311,JY,2018,Ames 26116,CI3A,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,NA
+1313,JY,2018,PI 550454,B52,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,5
+1315,JY,2018,PI 550467,B37,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,4.6
+1317,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb2,1,1,7.1
+1319,JY,2018,Ames 27170,NC348,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,5.4
+1321,JY,2018,PI 550558,DE811,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,5.7
+1323,JY,2018,PI 558532,Mo17,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,4.5
+1325,JY,2018,NSL 65873,L317,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,NA
+1327,JY,2018,Ames 27081,CML103,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,4.8
+1329,JY,2018,Ames 27149,NC306,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,NA
+1331,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,6.3
+1333,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb3,1,1,6.3
+1335,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,6.8
+1337,JY,2018,PI 606330,DE2,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,5.5
+1339,JY,2018,Ames 19328,Va22,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1341,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1343,JY,2018,PI 606768,SD40,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,3.6
+1345,JY,2018,Ames 24989,Va99,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,5.6
+1347,JY,2018,PI 257506,F2,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,4.2
+1349,JY,2018,Ames 27120,Il677a,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,4.7
+1351,JY,2018,Ames 27112,F2834T,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1353,JY,2018,PI 606329,DE1,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,7.5
+1355,JY,2018,PI 594048,B105,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1357,JY,2018,PI 608766,B79,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,6
+1359,JY,2018,Ames 27097,CML323,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1361,JY,2018,Ames 27087,CML220,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,4.9
+1363,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,4.9
+1365,JY,2018,Ames 12734,NC236,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,5.2
+1367,JY,2018,Ames 27165,NC338,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,4.6
+1369,JY,2018,Ames 27171,NC350,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,4.6
+1371,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,6.8
+1373,JY,2018,Ames 27148,NC304,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1375,JY,2018,PI 583351,Mo46,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,4.4
+1377,JY,2018,Ames 12735,NC238,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1379,JY,2018,PI 550555,NC250,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,4.4
+1381,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb3,1,1,3.8
+1383,JY,2018,PI 587151,Va102,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,3.7
+1385,JY,2018,Ames 27163,NC334,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,4.2
+1387,JY,2018,Ames 27172,NC352,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,5.7
+1389,JY,2018,PI 573098,Oh603,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,NA
+1391,JY,2018,Ames 27184,Pa762,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,5.2
+1393,JY,2018,NSL 53094,SC357,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,3.7
+1395,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,7
+1401,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb1,1,1,5.8
+1403,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,5.9
+1405,JY,2018,Ames 27065,B73Htrhm,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,NA
+1407,JY,2018,PI 587142,A679,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,3.9
+1409,JY,2018,PI 608765,B77,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,5.8
+1411,JY,2018,Ames 23503,A680,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,NA
+1413,JY,2018,PI 550461,B14A,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,4.8
+1415,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb1,1,1,4.4
+1417,JY,2018,Ames 27114,H91,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,5.1
+1419,JY,2018,PI 531084,NC258,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,3.8
+1421,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb2,1,1,3
+1423,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,NA
+1425,JY,2018,Ames 27118,Il14H,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,4.6
+1427,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb2,1,1,NA
+1429,JY,2018,Ames 27167,NC342,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,5.4
+1431,JY,2018,Ames 27140,NC260,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,3.9
+1433,JY,2018,NSL 28966,Oh40B,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,2.9
+1435,JY,2018,Ames 28290,C49,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,4.6
+1437,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb3,1,1,5.2
+1439,JY,2018,NSL 65874,Os420,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1441,JY,2018,Ames 26771,33-16,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1443,JY,2018,PI 587125,CO109,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,3.2
+1445,JY,2018,Ames 27180,NC368,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,6.7
+1447,JY,2018,PI 592734,R229,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1449,JY,2018,Ames 22440,CI90C,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1451,JY,2018,Ames 27064,A441-5,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1453,JY,2018,PI 587148,CI66,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1455,JY,2018,Ames 19319,H95,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1457,JY,2018,PI 550472,B57,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,6.4
+1459,JY,2018,Ames 27089,CML238,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1461,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb1,1,1,4.2
+1463,JY,2018,PI 594047,B104,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,5
+1465,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb2,1,1,5.7
+1467,JY,2018,Ames 22754,K55,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,5.1
+1469,JY,2018,Ames 27261,NC298,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,3.7
+1471,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb2,1,1,4.1
+1473,JY,2018,Ames 12731,NC230,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,4.7
+1475,JY,2018,Ames 27138,N28Ht,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,3.9
+1477,JY,2018,PI 520774,NC264,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,5
+1479,JY,2018,Ames 27147,NC302,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1481,JY,2018,Ames 27194,W401,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,3.5
+1483,JY,2018,NSL 30053,W22,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,2.5
+1485,JY,2018,Ames 27182,NC372,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,3.7
+1487,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb3,1,1,4.5
+1489,JY,2018,Ames 27174,NC356,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,NA
+1491,JY,2018,Ames 27175,NC358,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,4.2
+1493,JY,2018,Ames 27190,T234,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,NA
+1495,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,7.6
+1501,JY,2018,NSL 30904,4226,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,3.1
+1503,JY,2018,Ames 27066,B164,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,3.6
+1505,JY,2018,Ames 19314,CI64,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,4.3
+1507,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,NA
+1509,JY,2018,PI 564682,B97,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,5.3
+1511,JY,2018,PI 608767,B84,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,4.6
+1513,JY,2018,PI 597927,B109,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,4.5
+1515,JY,2018,PI 587130,4722,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb1,1,1,3.6
+1517,JY,2018,Ames 27151,NC310,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,3.1
+1519,JY,2018,Ames 27160,NC328,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,4
+1521,JY,2018,Ames 28939,Mo44,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,5.1
+1523,JY,2018,Ames 27143,NC294,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,3.8
+1525,JY,2018,Ames 27168,NC344,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,NA
+1527,JY,2018,Ames 27133,M37W,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,4.7
+1529,JY,2018,Ames 27159,NC326,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,5.6
+1531,JY,2018,PI 583350,Mo45,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb2,1,1,3.5
+1533,JY,2018,Ames 27178,NC364,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,4.7
+1535,JY,2018,PI 517974,Pa880,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1537,JY,2018,PI 550518,T8,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,5.2
+1539,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb3,spb3,1,1,5.3
+1541,JY,2018,NSL 30894,R177,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,5.8
+1543,JY,2018,PI 587149,Va26,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,NA
+1545,JY,2018,Ames 19293,Wf9,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,4.2
+1547,JY,2018,Ames 22748,H100,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb3,spb3,1,1,4.6
+1549,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb1,1,1,3.3
+1551,JY,2018,PI 587131,HP301,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,1.8
+1553,JY,2018,Ames 19284,C103,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,3.6
+1555,JY,2018,PI 587128,H84,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,5.8
+1557,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,6.1
+1559,JY,2018,Ames 27100,CML332,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,NA
+1561,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb1,1,1,4
+1563,JY,2018,Ames 27116,I137TN,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb1,1,1,4.5
+1565,JY,2018,Ames 27164,NC336,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1567,JY,2018,Ames 27158,NC324,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1569,JY,2018,Ames 27124,Ki11,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1571,JY,2018,PI 543916,Mp339,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1573,JY,2018,Ames 27134,M162W,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1575,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B1,+N,sb4,spb2,1,1,4.6
+1577,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,NA
+1579,JY,2018,Ames 27141,NC290A,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb2,1,1,6.1
+1581,JY,2018,Ames 19323,Oh7B,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,NA
+1583,JY,2018,Ames 27181,NC370,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,6.9
+1585,JY,2018,Ames 27173,NC354,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,NA
+1587,JY,2018,PI 587152,W64A,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,4.6
+1589,JY,2018,Ames 27193,Va85,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,7.2
+1591,JY,2018,Ames 27177,NC362,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,5.4
+1593,JY,2018,Ames 27185,Pa875,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,3.6
+1595,JY,2018,Ames 27176,NC360,Havelock,282+N-N,yes,35,No,NA,B1,+N,sb4,spb3,1,1,6
+4001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb1,2,4,3.9
+4003,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,5.8
+4005,JY,2018,Ames 27100,CML332,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,NA
+4007,JY,2018,PI 587148,CI66,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,5.9
+4009,JY,2018,Ames 19284,C103,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,4.1
+4011,JY,2018,Ames 22440,CI90C,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,NA
+4013,JY,2018,Ames 27087,CML220,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,3.7
+4015,JY,2018,PI 608766,B79,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,4.1
+4017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb2,2,4,4.5
+4019,JY,2018,Ames 27148,NC304,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,4.8
+4021,JY,2018,PI 520774,NC264,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,4.9
+4023,JY,2018,Ames 12735,NC238,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5.4
+4025,JY,2018,Ames 27124,Ki11,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,NA
+4027,JY,2018,Ames 27141,NC290A,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5.8
+4029,JY,2018,Ames 12731,NC230,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,4.6
+4031,JY,2018,Ames 27164,NC336,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,6.8
+4033,JY,2018,Ames 27173,NC354,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,5.1
+4035,JY,2018,Ames 27190,T234,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,6.6
+4037,JY,2018,PI 587151,Va102,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.6
+4039,JY,2018,NSL 53094,SC357,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,3.5
+4041,JY,2018,Ames 27194,W401,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,3.5
+4043,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,7.2
+4045,JY,2018,PI 573098,Oh603,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,5.9
+4047,JY,2018,Ames 27163,NC334,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.3
+4049,JY,2018,PI 595565,CML287,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4051,JY,2018,Ames 27090,CML258,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4053,JY,2018,Ames 27095,CML321,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4055,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb1,2,4,5.4
+4057,JY,2018,Ames 27091,CML261,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4059,JY,2018,PI 595542,CML254,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4061,JY,2018,PI 406112,A214N,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,5.3
+4063,JY,2018,Ames 27085,CML158Q,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,3.5
+4065,JY,2018,Ames 27121,K64,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,4.8
+4067,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,6.5
+4069,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb2,2,4,4.5
+4071,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb2,2,4,5
+4073,JY,2018,PI 595561,CML52,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,3.7
+4075,JY,2018,Ames 27139,NC33,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,NA
+4077,JY,2018,NSL 22893,F44,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,3.7
+4079,JY,2018,Ames 27113,GT112,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,6.1
+4081,JY,2018,PI 550522,T232,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,7.3
+4083,JY,2018,PI 506247,Tzi9,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,5.6
+4085,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6.8
+4087,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb3,2,4,4.3
+4089,JY,2018,PI 506253,Tzi18,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6
+4091,JY,2018,Ames 22763,Tx601,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,NA
+4093,JY,2018,Ames 27136,Mo.G,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,5.4
+4095,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb3,2,4,5.5
+4101,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb1,2,4,2.9
+4103,JY,2018,PI 594047,B104,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,5.2
+4105,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb1,2,4,3.5
+4107,JY,2018,PI 587131,HP301,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,1.5
+4109,JY,2018,Ames 19319,H95,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,4.2
+4111,JY,2018,Ames 27089,CML238,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,NA
+4113,JY,2018,Ames 27120,Il677a,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,5.5
+4115,JY,2018,PI 606329,DE1,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,3.4
+4117,JY,2018,Ames 27158,NC324,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,3.5
+4119,JY,2018,Ames 27134,M162W,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,7.1
+4121,JY,2018,Ames 27171,NC350,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5.5
+4123,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,NA
+4125,JY,2018,Ames 27261,NC298,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5
+4127,JY,2018,Ames 12734,NC236,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5.1
+4129,JY,2018,Ames 27165,NC338,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,NA
+4131,JY,2018,Ames 27138,N28Ht,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,4.6
+4133,JY,2018,Ames 19323,Oh7B,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,6.4
+4135,JY,2018,Ames 27185,Pa875,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,5.2
+4137,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb3,2,4,4.1
+4139,JY,2018,Ames 27177,NC362,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.5
+4141,JY,2018,Ames 27182,NC372,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4
+4143,JY,2018,Ames 27176,NC360,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.9
+4145,JY,2018,NSL 30053,W22,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.5
+4147,JY,2018,Ames 27174,NC356,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,5.1
+4149,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb1,2,4,4.7
+4151,JY,2018,Ames 27101,CML333,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,4.6
+4153,JY,2018,Ames 27072,CML10,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4155,JY,2018,Ames 27094,CML314,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4157,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,5.6
+4159,JY,2018,PI 595550,CML277,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,4
+4161,JY,2018,Ames 27093,CML311,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4163,JY,2018,Ames 27086,CML218,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,4.2
+4165,JY,2018,PI 587144,Mo24W,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,3
+4167,JY,2018,Ames 27155,NC318,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,4.3
+4169,JY,2018,Ames 27108,D940Y,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,NA
+4171,JY,2018,NSL 22894,F6,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,6.7
+4173,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb2,2,4,4.4
+4175,JY,2018,Ames 28184,CML69,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,NA
+4177,JY,2018,Ames 27144,NC296,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,6.5
+4179,JY,2018,Ames 27079,CML91,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,7.7
+4181,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb3,2,4,4.9
+4183,JY,2018,Ames 27189,SC55,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6.2
+4185,JY,2018,Ames 26808,Ill.Hy,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6
+4187,JY,2018,Ames 27169,NC346,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6.8
+4189,JY,2018,PI 540745,Tzi11,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,3.8
+4191,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,5
+4193,JY,2018,PI 506248,Tzi10,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,NA
+4195,JY,2018,PI 587147,Pa91,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,5.4
+4201,JY,2018,Ames 27064,A441-5,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,NA
+4203,JY,2018,PI 594048,B105,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,3.7
+4205,JY,2018,PI 587128,H84,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,4.7
+4207,JY,2018,Ames 27112,F2834T,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,NA
+4209,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,4.6
+4211,JY,2018,Ames 27097,CML323,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,3.8
+4213,JY,2018,Ames 27116,I137TN,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,NA
+4215,JY,2018,PI 550472,B57,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb1,2,4,4.5
+4217,JY,2018,Ames 22754,K55,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5
+4219,JY,2018,Ames 27147,NC302,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5.6
+4221,JY,2018,PI 550555,NC250,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5
+4223,JY,2018,PI 583351,Mo46,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5
+4225,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb2,2,4,5.6
+4227,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb2,2,4,5.6
+4229,JY,2018,PI 543916,Mp339,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,6.8
+4231,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb2,2,4,5.6
+4233,JY,2018,Ames 27172,NC352,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,7.5
+4235,JY,2018,Ames 27184,Pa762,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,5.1
+4237,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,5
+4239,JY,2018,Ames 27193,Va85,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,6.7
+4241,JY,2018,Ames 27175,NC358,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.4
+4243,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb1,spb3,2,4,4.1
+4245,JY,2018,PI 587152,W64A,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,4.3
+4247,JY,2018,Ames 27181,NC370,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb1,spb3,2,4,NA
+4249,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,5.5
+4251,JY,2018,Ames 27102,CML341,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4253,JY,2018,Ames 27082,CML108,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,5.1
+4255,JY,2018,Ames 27071,CML5,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4257,JY,2018,Ames 27074,CML14,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4259,JY,2018,Ames 26604,38-11,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,3.7
+4261,JY,2018,Ames 27088,CML228,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb1,2,4,NA
+4263,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb2,spb1,2,4,4
+4265,JY,2018,Ames 27156,NC320,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,5.2
+4267,JY,2018,Ames 12729,NC222,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,5.1
+4269,JY,2018,Ames 27080,CML92,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,4.8
+4271,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,NA
+4273,JY,2018,Ames 27110,E2558W,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,5.9
+4275,JY,2018,Ames 10248,GA209,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,3.9
+4277,JY,2018,NSL 30038,K4,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,4.5
+4279,JY,2018,Ames 27078,CML61,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb2,2,4,NA
+4281,JY,2018,Ames 27179,NC366,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6.7
+4283,JY,2018,PI 587145,NC268,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,5.1
+4285,JY,2018,PI 506255,Tzi25,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,5.9
+4287,JY,2018,PI 558520,Mo1W,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,3.7
+4289,JY,2018,PI 587136,Ky228,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,6.1
+4291,JY,2018,PI 587137,Ms71,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,NA
+4293,JY,2018,PI 506246,Tzi8,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,NA
+4295,JY,2018,Ames 27166,NC340,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb2,spb3,2,4,4.4
+4301,JY,2018,Ames 27067,C49A,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.8
+4303,JY,2018,Ames 22443,A188,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,4.2
+4305,JY,2018,PI 587140,A632,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.8
+4307,JY,2018,NSL 81599,A659,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.9
+4309,JY,2018,PI 587143,A682,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,5
+4311,JY,2018,PI 594046,B103,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,5
+4313,JY,2018,Ames 19308,A634,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,6.5
+4315,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,4.1
+4317,JY,2018,PI 583352,Mo47,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,NA
+4319,JY,2018,Ames 20190,CM37,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.3
+4321,JY,2018,Ames 27070,CM7,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.9
+4323,JY,2018,PI 587124,CM105,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.3
+4325,JY,2018,PI 587129,H99,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.6
+4327,JY,2018,Ames 27105,CO106,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.4
+4329,JY,2018,PI 550566,N192,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.2
+4331,JY,2018,Ames 27104,CMV3,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,10.8
+4333,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb3,2,4,5.5
+4335,JY,2018,PI 587154,W153R,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,2.8
+4337,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,6.8
+4339,JY,2018,Ames 19016,Va59,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.2
+4341,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb3,2,4,4.3
+4343,JY,2018,PI 587150,Va35,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,5.7
+4345,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb3,2,4,NA
+4347,JY,2018,Ames 19288,Oh43,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,3.7
+4349,JY,2018,PI 550461,B14A,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,NA
+4351,JY,2018,PI 550473,B73,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4
+4353,JY,2018,Ames 27066,B164,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4.7
+4355,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb1,2,4,4.8
+4357,JY,2018,PI 550465,B68,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5.3
+4359,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb1,2,4,NA
+4361,JY,2018,PI 608765,B77,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5.6
+4363,JY,2018,PI 587142,A679,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,NA
+4365,JY,2018,Ames 27114,H91,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,NA
+4367,JY,2018,Ames 27151,NC310,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,3.8
+4369,JY,2018,NSL 65873,L317,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,3.3
+4371,JY,2018,Ames 27160,NC328,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,4.9
+4373,JY,2018,Ames 27081,CML103,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,3
+4375,JY,2018,Ames 27118,Il14H,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,4.6
+4377,JY,2018,PI 583350,Mo45,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,4.3
+4379,JY,2018,PI 531084,NC258,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,4.3
+4381,JY,2018,PI 587149,Va26,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.4
+4383,JY,2018,Ames 24989,Va99,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,5.7
+4385,JY,2018,PI 592734,R229,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,5
+4387,JY,2018,NSL 65874,Os420,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,NA
+4389,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,NA
+4391,JY,2018,Ames 19328,Va22,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.9
+4393,JY,2018,Ames 19293,Wf9,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.8
+4395,JY,2018,Ames 26771,33-16,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,NA
+4401,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb1,2,4,4.8
+4403,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,4.6
+4405,JY,2018,Ames 19309,A635,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.2
+4407,JY,2018,PI 550440,B64,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,NA
+4409,JY,2018,Ames 23450,A556,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,4.8
+4411,JY,2018,PI 550483,B76,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,6
+4413,JY,2018,Ames 19313,C123,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.6
+4415,JY,2018,PI 587138,A554,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.6
+4417,JY,2018,Ames 27106,CO125,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.2
+4419,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb2,2,4,6.2
+4421,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb2,2,4,3.7
+4423,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb2,2,4,5.3
+4425,JY,2018,Ames 27111,EP1,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.6
+4427,JY,2018,PI 257507,F7,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.2
+4429,JY,2018,NSL 30867,M14,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.2
+4431,JY,2018,Ames 19316,CM174,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.2
+4433,JY,2018,Ames 19326,R168,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,2
+4435,JY,2018,PI 550490,ND246,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,2.7
+4437,JY,2018,Ames 27137,N6,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.9
+4439,JY,2018,Ames 27142,NC292,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,3.8
+4441,JY,2018,Ames 19330,W182B,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,3.7
+4443,JY,2018,Ames 27152,NC312,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,5.5
+4445,JY,2018,Ames 27183,Oh43E,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.6
+4447,JY,2018,Ames 27150,NC308,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.5
+4449,JY,2018,Ames 26116,CI3A,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5
+4451,JY,2018,Ames 23503,A680,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,3.7
+4453,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb1,2,4,NA
+4455,JY,2018,PI 597927,B109,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4.2
+4457,JY,2018,PI 550469,B46,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4.9
+4459,JY,2018,NSL 30904,4226,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4.3
+4461,JY,2018,PI 550467,B37,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5.5
+4463,JY,2018,Ames 27065,B73Htrhm,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,2.5
+4465,JY,2018,Ames 27140,NC260,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,3.7
+4467,JY,2018,Ames 27159,NC326,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,3.4
+4469,JY,2018,Ames 27149,NC306,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,6
+4471,JY,2018,PI 550558,DE811,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,5.8
+4473,JY,2018,Ames 27143,NC294,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,3.7
+4475,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,NA
+4477,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb2,2,4,5.1
+4479,JY,2018,PI 558532,Mo17,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,6.4
+4481,JY,2018,PI 550518,T8,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.7
+4483,JY,2018,PI 606768,SD40,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,5
+4485,JY,2018,PI 587125,CO109,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.1
+4487,JY,2018,Ames 22748,H100,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,6.2
+4489,JY,2018,Ames 27180,NC368,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,6.3
+4491,JY,2018,PI 606330,DE2,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,5.4
+4493,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb3,2,4,4.8
+4495,JY,2018,Ames 27178,NC364,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.3
+4501,JY,2018,PI 607521,A661,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,4.6
+4503,JY,2018,Ames 23405,A239,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.6
+4505,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb1,2,4,4.8
+4507,JY,2018,PI 587141,A654,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.2
+4509,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb3,spb1,2,4,3.5
+4511,JY,2018,Ames 27068,CH9,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,6.5
+4513,JY,2018,PI 608774,B75,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,3.3
+4515,JY,2018,PI 587139,A619,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb1,2,4,NA
+4517,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,5.1
+4519,JY,2018,Ames 24734,MS153,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.5
+4521,JY,2018,Ames 20140,Mt42,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,2.2
+4523,JY,2018,PI 587127,H105W,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,NA
+4525,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,4.2
+4527,JY,2018,Ames 24752,MS1334,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.1
+4529,JY,2018,Ames 27107,CO255,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,3.7
+4531,JY,2018,Ames 27135,MEF156-55-2,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb2,2,4,NA
+4533,JY,2018,Ames 27162,NC332,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.6
+4535,JY,2018,Ames 27161,NC330,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.4
+4537,JY,2018,Ames 27196,Yu796_NS,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,NA
+4539,JY,2018,PI 531085,NC262,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,6.9
+4541,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,5.6
+4543,JY,2018,Ames 27154,NC316,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.5
+4545,JY,2018,PI 524969,SD44,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,4.1
+4547,JY,2018,Ames 19000,VaW6,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb3,spb3,2,4,5.4
+4549,JY,2018,Ames 19314,CI64,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4.4
+4551,JY,2018,PI 564682,B97,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5.1
+4553,JY,2018,PI 550454,B52,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5.4
+4555,JY,2018,PI 608767,B84,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5
+4557,JY,2018,Ames 27069,CH701-30,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,NA
+4559,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,6.2
+4561,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,5.4
+4563,JY,2018,PI 587130,4722,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb1,2,4,4.7
+4565,JY,2018,Ames 27167,NC342,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,5.4
+4567,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb2,2,4,NA
+4569,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,5.6
+4571,JY,2018,Ames 27168,NC344,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,NA
+4573,JY,2018,Ames 28939,Mo44,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,5.2
+4575,JY,2018,Ames 27170,NC348,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,4.9
+4577,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb2,2,4,4.2
+4579,JY,2018,Ames 27133,M37W,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb2,2,4,NA
+4581,JY,2018,NSL 30894,R177,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,NA
+4583,JY,2018,check,NA,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,5.8
+4585,JY,2018,PI 517974,Pa880,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,4.9
+4587,JY,2018,Ames 28290,C49,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,NA
+4589,JY,2018,PI 257506,F2,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,5.5
+4591,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb3,2,4,4.6
+4593,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,B2,+N,sb4,spb3,2,4,2.9
+4595,JY,2018,NSL 28966,Oh40B,Havelock,282+N-N,yes,35,No,NA,B2,+N,sb4,spb3,2,4,NA
