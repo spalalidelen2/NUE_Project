@@ -312,7 +312,7 @@ hist(nit$value, breaks=25, col="#6495ed", xlab="cob weight in +N in 2018-2019", 
 
 hist(nonit$value, breaks=25, col="#c6e2ff", xlab="cob weight in -N in 2018-2019", ylab="freq", main="histogram")
 
-t.test(nit$value, df2$value)
+t.test(nit$value, nonit$value)
 
 dim(df2)
 ```
