@@ -1,0 +1,56 @@
+---
+title: "Cd mapping"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+```{r}
+df <- read.csv ("data/Appendix_2a_Top5_18Sept2013.csv")
+head(df)
+class(df$Latitude)
+View(df)
+df$Latitude <- as.numeric(as.character(df$Latitude))
+range(df$Latitude, na.rm = T)
+```
+
+```{r}
+df$Longitude <- as.numeric(as.character(df$Longitude))
+range(df$Longitude, na.rm = T)
+```
+
+```{r}
+install.packages("ggmap")
+library(ggmap)
+
+##lowerleftlon, lowerleftlat, upperrightlon, upperrightlat
+myloc <- c(-124, 25, -68, 50)
+
+mymap <- get_map(location=myloc, source="stamen", crop=FALSE, color="bw")
+ggmap(mymap) + 
+    geom_point(aes(x = Longitude, y = Latitude), data = df,
+               alpha = .9, size = 1, col="red")
+```
+
+```{r}
+library(plyr)
+c <- ddply(df, .(StateID), nrow)
+head(c)
+c <- subset(c, StateID != "")
+df2 <- merge(c, df[, c("StateID",  "Latitude", "Longitude")], by="StateID")
+df2 <- df2[!duplicated(df2$StateID), ]
+mymap <- get_map(location=myloc, source="stamen", crop=FALSE, color="bw")
+ggmap(mymap) + 
+    geom_point(aes(x = Longitude, y = Latitude), data = df2,
+               alpha = .9, size = df2$V1/50, col="red")
+```
+
+#### How to identify the density of Cd
+```{r}
+
+```
+
