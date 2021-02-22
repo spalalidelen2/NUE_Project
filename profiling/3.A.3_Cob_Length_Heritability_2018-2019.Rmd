@@ -1,0 +1,168 @@
+---
+title: "heritability calculation"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+
+```{r}
+library(readr)
+cwd <- read.csv("cache/cob_length_2018_2019_N.csv")
+head(cwd)
+class(cwd$meancw)
+#View(cwd)
+head(cwd)
+tail(cwd)
+dim(cwd)
+
+```
+
+
+
+```{r}
+install.packages("tidyverse")
+update.packages('rlang')
+install.packages("devtools")
+devtools::install_github("jyanglab/g3tools")
+library("g3tools")
+```
+
+```{r}
+install.packages("scales")
+ls(getNamespace("g3tools"), all.names=FALSE)
+```
+
+
+```{r}
+options(stringsAsFactors = FALSE) 
+install.packages("devtools")
+install.packages("Rtools")
+library(devtools)
+devtools::install_github("jyanglab/g3tools")
+devtools::install_github("r-lib/devtools")
+
+```
+
+
+
+
+```{r}
+ls(getNamespace("g3tools"), all.names=FALSE)
+
+help("get_BLUP")
+help("get_H2")
+
+```
+
+
+
+```{r}
+pheno_cwd <- cwd 
+
+
+#install.packages("Ime4")
+library(lme4)
+```
+
+```{r}
+heritability <- get_BLUP(data = pheno_cwd, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
+  | Genotype:year), which.factor = "Genotype", outfile = "heritability.csv")
+
+```
+
+
+```{r}
+summary(heritability)
+```
+
+
+```{r}
+vg = 2.23585
+ve = 2.26501
+H2 = vg/(vg+ve/4) #Since I have 2 replications and 2 years. So, it is 2x2= 4
+H2 #  0.7979187
+
+```
+
+
+###Low Nitrogen
+```{r}
+library(readr)
+cwd_No <- read.csv("cache/cob_length_2018_2019_noN.csv")
+head(cwd_No)
+class(cwd_No$meancw)
+View(cwd_No)
+head(cwd_No)
+tail(cwd_No)
+dim(cwd_No)
+
+```
+
+
+
+```{r}
+install.packages("tidyverse")
+update.packages('rlang')
+install.packages("devtools")
+devtools::install_github("jyanglab/g3tools")
+library("g3tools")
+```
+
+```{r}
+install.packages("scales")
+ls(getNamespace("g3tools"), all.names=FALSE)
+```
+
+
+```{r}
+options(stringsAsFactors = FALSE) 
+install.packages("devtools")
+install.packages("Rtools")
+library(devtools)
+devtools::install_github("jyanglab/g3tools")
+devtools::install_github("r-lib/devtools")
+
+```
+```{r}
+ls(getNamespace("g3tools"), all.names=FALSE)
+
+#help("get_BLUP")
+#help("get_H2")
+
+```
+
+
+
+```{r}
+pheno_noN <- cwd_No 
+
+
+install.packages("Ime4")
+library(lme4)
+```
+
+```{r}
+heritability <- get_BLUP(data = pheno_noN, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
+  | Genotype:year), which.factor = "Genotype", outfile = "heritability.csv")
+
+```
+
+
+```{r}
+summary(heritability)
+```
+
+
+```{r}
+vg = 1.481290
+ve = 2.838897
+H2 = vg/(vg+(ve/4)) #Since I have 2 replications and 2 years. So, it is 2x2= 4
+H2 #  0.676075
+
+```

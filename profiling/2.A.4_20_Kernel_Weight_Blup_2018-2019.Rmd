@@ -338,10 +338,12 @@ dim(nit)
 
 #merging the two data sets. all=T means that we include the genotypes that only have 1 data point.
 combined<- merge.data.frame(nonit,nit,by="Genotype",all=T)
+View(combined)
 
 #convert from wide to long
 
 combinedlong <- gather(combined,Nitrogen,BLUP,c("BLUP_noN","BLUP_N"),factor_key = T)
+View(combinedlong)
 
 plot <- ggplot(data=combinedlong,aes(x=Nitrogen,y=BLUP)) + 
         geom_boxplot(outlier.colour="red",notch=T) #red color for outliers, notch=T just means there is a curve in the box plot. Change to notch=F to get a simple box

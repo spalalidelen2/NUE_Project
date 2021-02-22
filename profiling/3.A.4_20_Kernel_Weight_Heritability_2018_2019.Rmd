@@ -1,0 +1,189 @@
+---
+title: "heritability calculation"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+
+```{r}
+library(readr)
+kwh <- read.csv("../cache/20_kernel_weight_2018_2019_N.csv")
+head(kwh)
+class(kwh$Weight.of.20.seeds)
+#View(kwh)
+head(kwh)
+tail(kwh)
+dim(kwh)
+
+```
+
+
+
+```{r}
+install.packages("tidyverse")
+update.packages('rlang')
+install.packages("devtools")
+devtools::install_github("jyanglab/g3tools")
+library("g3tools")
+```
+
+```{r}
+install.packages("scales")
+ls(getNamespace("g3tools"), all.names=FALSE)
+```
+
+
+```{r}
+options(stringsAsFactors = FALSE) 
+install.packages("devtools")
+install.packages("Rtools")
+library(devtools)
+devtools::install_github("jyanglab/g3tools")
+devtools::install_github("r-lib/devtools")
+
+```
+```{r}
+ls(getNamespace("g3tools"), all.names=FALSE)
+
+help("get_BLUP")
+help("get_H2")
+
+```
+
+
+
+```{r}
+pheno <- kwh 
+
+
+install.packages("Ime4")
+library(lme4)
+```
+
+```{r}
+heritability <- get_BLUP(data = pheno, model = Weight.of.20.seeds ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
+  | Genotype:year), which.factor = "Genotype", outfile = "heritability.csv")
+
+```
+
+
+```{r}
+summary(heritability)
+```
+
+
+```{r}
+vg = 0.538006
+ve = 0.648557
+H2 = vg/(vg+ve/4) #Since I have 2 replications and 2 years. So, it is 2x2= 4
+H2 #  0.7684206
+
+```
+
+
+###Low Nitrogen
+```{r}
+library(readr)
+kwh <- read.csv("cache/20_kernel_weight_2018_2019_noN.csv")
+head(kwh)
+class(kwh$Weight.of.20.seeds)
+View(kwh)
+head(kwh)
+tail(kwh)
+dim(kwh)
+
+```
+
+
+
+```{r}
+install.packages("tidyverse")
+update.packages('rlang')
+install.packages("devtools")
+devtools::install_github("jyanglab/g3tools")
+library("g3tools")
+```
+
+```{r}
+install.packages("scales")
+ls(getNamespace("g3tools"), all.names=FALSE)
+```
+
+
+```{r}
+options(stringsAsFactors = FALSE) 
+install.packages("devtools")
+install.packages("Rtools")
+library(devtools)
+devtools::install_github("jyanglab/g3tools")
+devtools::install_github("r-lib/devtools")
+
+```
+```{r}
+ls(getNamespace("g3tools"), all.names=FALSE)
+
+#help("get_BLUP")
+#help("get_H2")
+
+```
+
+
+
+```{r}
+pheno_noN <- kwh 
+
+
+install.packages("Ime4")
+library(lme4)
+```
+
+```{r}
+heritability <- get_BLUP(data = pheno_noN, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
+  | Genotype:year), which.factor = "Genotype", outfile = "heritability.csv")
+
+```
+
+
+```{r}
+summary(heritability)
+```
+
+
+```{r}
+vg = 1.481290
+ve = 2.838897
+H2 = vg/(vg+(ve/4)) #Since I have 2 replications and 2 years. So, it is 2x2= 4
+H2 #  0.676075
+
+```
+
+
+
+
+```{r}
+#install.packages("ggplot2")
+library("ggplot2")
+heritability <- read.csv("../data/heritability_all.csv")
+#View(heritability)
+
+p1n <- ggplot(heritability, aes(x=traits, y=heritability, colour = factor(traits), by = "traits", head = TRUE)) +
+    #facet_grid(. ~ type) +
+    geom_point(size=5) +
+    geom_smooth(method='loess') +
+    theme_bw() +
+    xlab("Traits") +
+    ylab("Heritability") +
+    theme(axis.text=element_text(size=12), axis.title=element_text(size=15) )
+  #########
+p1n
+
+```
+
+
+
