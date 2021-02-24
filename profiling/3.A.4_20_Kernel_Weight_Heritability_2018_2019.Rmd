@@ -68,7 +68,7 @@ library(lme4)
 
 ```{r}
 heritability <- get_BLUP(data = pheno, model = Weight.of.20.seeds ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
-  | Genotype:year), which.factor = "Genotype", outfile = "heritability.csv")
+  | Genotype:year)+ (1 | Genotype:block), which.factor = "Genotype", outfile = "heritability.csv")
 
 ```
 
@@ -79,10 +79,10 @@ summary(heritability)
 
 
 ```{r}
-vg = 0.538006
-ve = 0.648557
+vg = 5.380e-01
+ve = 6.486e-01
 H2 = vg/(vg+ve/4) #Since I have 2 replications and 2 years. So, it is 2x2= 4
-H2 #  0.7684206
+H2 #  0.7684068
 
 ```
 
@@ -90,7 +90,7 @@ H2 #  0.7684206
 ###Low Nitrogen
 ```{r}
 library(readr)
-kwh <- read.csv("cache/20_kernel_weight_2018_2019_noN.csv")
+kwh <- read.csv("../cache/20_kernel_weight_2018_2019_noN.csv")
 head(kwh)
 class(kwh$Weight.of.20.seeds)
 View(kwh)
@@ -145,7 +145,7 @@ library(lme4)
 
 ```{r}
 heritability <- get_BLUP(data = pheno_noN, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
-  | Genotype:year), which.factor = "Genotype", outfile = "heritability.csv")
+  | Genotype:year)+ (1 | Genotype:block), which.factor = "Genotype", outfile = "heritability.csv")
 
 ```
 
@@ -156,10 +156,10 @@ summary(heritability)
 
 
 ```{r}
-vg = 1.481290
+vg = 1.481289
 ve = 2.838897
 H2 = vg/(vg+(ve/4)) #Since I have 2 replications and 2 years. So, it is 2x2= 4
-H2 #  0.676075
+H2 #  0.6760749
 
 ```
 

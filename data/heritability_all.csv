@@ -1,9 +1,9 @@
 ﻿traits,heritability
-cob_width_Nitrogen,0.8966029
-cob_width_noNitrogen,0.8676206
-cob_weight_Nitrogen,0.6381307
-cob_weight_noNitrogen,0.4992631
-cob_length_Nitrogen,0.7979187
-cob_length_noNitrogen,0.676075
-20_kernel_weight_Nitrogen,0.7684206
-20_kernel_weight_noNitrogen,0.676075
+Cobwidth_Nit,0.9028414
+Cobwidth_noNit,0.8773433
+Cobweight_Nit,0.6382288
+Cobweight_noNit,0.4992339
+Coblength_Nit,0.7996097
+Coblength_noNit,0.6760749
+20_Kernelweight_Nit,0.7684068
+20_Kernelweight_noNit,0.6760749
