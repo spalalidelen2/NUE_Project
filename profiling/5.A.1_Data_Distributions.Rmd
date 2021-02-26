@@ -1,0 +1,258 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+```{r}
+library(readr)
+cwd <- read.csv("../cache/pheno2018_cobwidth.csv")
+View(cwd)
+pheno_cwd <- cwd[,c("nitrogen", "meancw")]
+View(pheno_cwd)
+
+pheno_cwd %>% 
+  rename(Cob_Width_2018 = meancw) -> ph_2018.b
+
+dim(ph_2018.b)
+
+
+library(ggplot2)
+ggplot(ph_2018.b, aes(x = Cob_Width_2018, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(cwd, nitrogen %in% "+N")$meancw
+
+cwd3 <- subset(cwd, nitrogen %in% "-N")$meancw
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+
+```
+
+
+
+
+
+```{r}
+library(readr)
+cwg <- read.csv("../cache/pheno2018_cob_weight.csv")
+View(cwg)
+pheno_cwg <- cwg[,c("nitrogen", "Average.cob.weight")]
+View(pheno_cwg)
+
+pheno_cwg %>% 
+  rename(Cob_Weight_2018 = Average.cob.weight) -> ph_2018.a
+
+
+ph_2018.c <- subset(ph_2018.a, Cob_Weight_2018 > 2)
+ph_2018.b <- subset(ph_2018.c, Cob_Weight_2018 < 35)
+
+
+
+library(ggplot2)
+ggplot(ph_2018.b, aes(x = Cob_Weight_2018, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.b, nitrogen %in% "+N")$Cob_Weight_2018
+
+cwd3 <- subset(ph_2018.b, nitrogen %in% "-N")$Cob_Weight_2018
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+
+```
+
+
+```{r}
+library(readr)
+cwd <- read.csv("../cache/pheno2018_cob_length.csv")
+View(cwd)
+pheno_cwd <- cwd[,c("nitrogen", "meancw")]
+View(pheno_cwd)
+
+pheno_cwd %>% 
+  rename(Cob_Length_2018 = meancw) -> ph_2018.a
+
+dim(ph_2018.b)
+
+ph_2018.c <- subset(ph_2018.a, Cob_Length_2018 > 5)
+#ph_2018.b <- subset(ph_2018.c, Cob_Length_2018 < 27)
+
+
+library(ggplot2)
+ggplot(ph_2018.c, aes(x = Cob_Length_2018, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.c, nitrogen %in% "+N")$Cob_Length_2018
+
+cwd3 <- subset(ph_2018.c, nitrogen %in% "-N")$Cob_Length_2018
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+```
+
+
+```{r}
+library(readr)
+cwd <- read.csv("../cache/pheno2018_20_kernel_weight.csv")
+View(cwd)
+pheno_cwd <- cwd[,c("nitrogen", "Weight.of.20.seeds")]
+View(pheno_cwd)
+
+pheno_cwd %>% 
+  rename(Weight_of_20_Kernel_2018 = Weight.of.20.seeds) -> ph_2018.a
+
+dim(ph_2018.b)
+
+#ph_2018.c <- subset(ph_2018.a, Cob_Length_2018 > 5)
+ph_2018.b <- subset(ph_2018.a, Weight_of_20_Kernel_2018 < 8)
+
+
+library(ggplot2)
+ggplot(ph_2018.b, aes(x = Weight_of_20_Kernel_2018, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.b, nitrogen %in% "+N")$Weight_of_20_Kernel_2018
+
+cwd3 <- subset(ph_2018.b, nitrogen %in% "-N")$Weight_of_20_Kernel_2018
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+
+```
+
+```{r}
+library(readr)
+cwd <- read.csv("../cache/pheno2019_cobwidth.csv")
+View(cwd)
+pheno_cwd <- cwd[,c("nitrogen", "meancw")]
+View(pheno_cwd)
+
+pheno_cwd %>% 
+  rename(Cob_Width_2019 = meancw) -> ph_2018.b
+
+dim(ph_2018.b)
+
+ph_2018.c <- subset(ph_2018.b, Cob_Width_2019 > 15)
+
+library(ggplot2)
+ggplot(ph_2018.c, aes(x = Cob_Width_2019, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.c, nitrogen %in% "+N")$Cob_Width_2019
+
+cwd3 <- subset(ph_2018.c, nitrogen %in% "-N")$Cob_Width_2019
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+```
+
+
+
+
+
+```{r}
+library(readr)
+cwg <- read.csv("../cache/pheno2019_cob_weight.csv")
+View(cwg)
+pheno_cwg <- cwg[,c("nitrogen", "Average.cob.weight")]
+View(pheno_cwg)
+
+pheno_cwg %>% 
+  rename(Cob_Weight_2019 = Average.cob.weight) -> ph_2018.a
+
+
+#ph_2018.c <- subset(ph_2018.a, Cob_Weight_2018 > 2)
+ph_2018.b <- subset(ph_2018.a, Cob_Weight_2019 < 37)
+
+
+
+library(ggplot2)
+ggplot(ph_2018.b, aes(x = Cob_Weight_2019, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.b, nitrogen %in% "+N")$Cob_Weight_2019
+
+cwd3 <- subset(ph_2018.b, nitrogen %in% "-N")$Cob_Weight_2019
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+```
+
+
+
+
+```{r}
+library(readr)
+cwd <- read.csv("../cache/pheno2019_cob_length.csv")
+View(cwd)
+pheno_cwd <- cwd[,c("nitrogen", "meancw")]
+View(pheno_cwd)
+
+pheno_cwd %>% 
+  rename(Cob_Length_2019 = meancw) -> ph_2018.a
+
+dim(ph_2018.b)
+
+ph_2018.c <- subset(ph_2018.a, Cob_Length_2019 > 5)
+ph_2018.b <- subset(ph_2018.c, Cob_Length_2019 < 21)
+
+
+library(ggplot2)
+ggplot(ph_2018.b, aes(x = Cob_Length_2019, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.b, nitrogen %in% "+N")$Cob_Length_2019
+
+cwd3 <- subset(ph_2018.b, nitrogen %in% "-N")$Cob_Length_2019
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+```
+
+
+
+
+
+```{r}
+library(readr)
+cwd <- read.csv("../cache/pheno2019_20_kernel_weight.csv")
+View(cwd)
+pheno_cwd <- cwd[,c("nitrogen", "Weight.of.20.seeds")]
+View(pheno_cwd)
+
+pheno_cwd %>% 
+  rename(Weight_of_20_Kernel_2019 = Weight.of.20.seeds) -> ph_2018.a
+
+dim(ph_2018.b)
+
+ph_2018.c <- subset(ph_2018.a, Weight_of_20_Kernel_2019 > 2)
+#ph_2018.b <- subset(ph_2018.a, Weight_of_20_Kernel_2018 < 8)
+
+
+library(ggplot2)
+ggplot(ph_2018.c, aes(x = Weight_of_20_Kernel_2019, fill = nitrogen)) + 
+  geom_histogram(position = "identity", alpha = 0.5, bins = 25)
+
+
+cwd2 <- subset(ph_2018.c, nitrogen %in% "+N")$Weight_of_20_Kernel_2019
+
+cwd3 <- subset(ph_2018.c, nitrogen %in% "-N")$Weight_of_20_Kernel_2019
+
+t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
+t.test(cwd2, cwd3)
+```
+

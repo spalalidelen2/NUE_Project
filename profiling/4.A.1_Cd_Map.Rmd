@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
-df <- read.csv ("data/Appendix_2a_Top5_18Sept2013.csv")
+df <- read.csv ("../data/Appendix_2a_Top5_18Sept2013.csv")
 head(df)
 class(df$Latitude)
 View(df)
@@ -24,7 +24,7 @@ range(df$Longitude, na.rm = T)
 ```
 
 ```{r}
-install.packages("ggmap")
+#install.packages("ggmap")
 library(ggmap)
 
 ##lowerleftlon, lowerleftlat, upperrightlon, upperrightlat

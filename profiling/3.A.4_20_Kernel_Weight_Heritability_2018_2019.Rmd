@@ -174,7 +174,7 @@ heritability <- read.csv("../data/heritability_all.csv")
 
 p1n <- ggplot(heritability, aes(x=traits, y=heritability, colour = factor(traits), by = "traits", head = TRUE)) +
     #facet_grid(. ~ type) +
-    geom_point(size=5) +
+    geom_point(size=12) +
     geom_smooth(method='loess') +
     theme_bw() +
     xlab("Traits") +

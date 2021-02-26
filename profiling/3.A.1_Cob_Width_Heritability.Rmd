@@ -71,6 +71,7 @@ library(lme4)
 ```
 
 ```{r}
+
 heritability <- get_BLUP(data = pheno_cwd, model = meancw ~ (1 | Genotype) + (1 | year) + (1 | block) + (1 | sb) + (1 | spb) + (1
   | Genotype:year) + (1 | Genotype:block), which.factor = "Genotype", outfile = "heritability.csv")
 
