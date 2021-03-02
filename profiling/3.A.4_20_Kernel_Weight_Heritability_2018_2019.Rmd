@@ -79,6 +79,19 @@ summary(heritability)
 
 
 ```{r}
+
+Vg= 5.380e-01
+Ve= 6.486e-01
+Vgxy= 7.265e-02
+Vgxb= 2.292e-14
+Ny = 2
+Nb = 2
+NyxNb = 4
+
+
+H2 = Vg/ (Vg + (Vgxy/Ny) + (Vgxb/Nb) + (Ve/NyxNb))
+H2 # 0.7305068
+
 vg = 5.380e-01
 ve = 6.486e-01
 H2 = vg/(vg+ve/4) #Since I have 2 replications and 2 years. So, it is 2x2= 4
@@ -156,6 +169,19 @@ summary(heritability)
 
 
 ```{r}
+Vg= 1.481289
+Ve= 2.838897
+Vgxy= 1.216116
+Vgxb= 0
+Ny = 2
+Nb = 2
+NyxNb = 4
+
+
+H2 = Vg/ (Vg + (Vgxy/Ny) + (Vgxb/Nb) + (Ve/NyxNb))
+H2 # 0.5292073
+
+
 vg = 1.481289
 ve = 2.838897
 H2 = vg/(vg+(ve/4)) #Since I have 2 replications and 2 years. So, it is 2x2= 4
@@ -167,7 +193,19 @@ H2 #  0.6760749
 
 
 ```{r}
+library(ggplot2)
+theme_set(
+  theme_minimal() +
+    theme(legend.position = "right")
+  )
+
+install.packages("ggpubr")
+ggpubr::show_point_shapes()
+
+
+
 #install.packages("ggplot2")
+#install.packages("tidyverse")
 library("ggplot2")
 heritability <- read.csv("../data/heritability_all.csv")
 #View(heritability)
@@ -179,9 +217,20 @@ p1n <- ggplot(heritability, aes(x=traits, y=heritability, colour = factor(traits
     theme_bw() +
     xlab("Traits") +
     ylab("Heritability") +
-    theme(axis.text=element_text(size=12), axis.title=element_text(size=15) )
-  #########
+    theme(axis.text=element_text(size=14), axis.title=element_text(size=17)) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 1)) ##force it to start zero
+  
+#########
+
 p1n
+p1n + scale_color_manual(values = c("darkblue", "lightblue", "darkblue", 
+                "lightblue", "darkblue", "lightblue", "darkblue", "lightblue")) +
+  scale_shape_manual(values = c(3, 23, 18, 16, 17, 19, 20, 21))
+
+  
+
+
+
 
 ```
 

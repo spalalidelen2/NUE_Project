@@ -84,6 +84,20 @@ summary(heritability)
 
 
 ```{r}
+Vg= 4.99488
+Ve= 2.15008
+Vgxy= 1.39980
+Vgxb= 0.24547
+Ny = 2
+Nb = 2
+NyxNb = 4
+
+
+H2 = Vg/ (Vg + (Vgxy/Ny) + (Vgxb/Nb) + (Ve/NyxNb))
+H2 # 0.7859721
+
+
+
 vg = 4.99488
 ve = 2.15008
 H2 = vg/(vg+ve/4) #Since I have 2 replications and 2 years. So, it is 2x2= 4
@@ -161,6 +175,20 @@ summary(heritability)
 
 
 ```{r}
+Vg= 4.095e+00
+Ve= 2.290e+00
+Vgxy= 1.907e+00
+Vgxb= 3.668e-01
+Ny = 2
+Nb = 2
+NyxNb = 4
+
+
+H2 = Vg/ (Vg + (Vgxy/Ny) + (Vgxb/Nb) + (Ve/NyxNb))
+H2 # 0.7054993
+
+
+
 vg = 4.095e+00
 ve = 2.290e+00
 H2 = vg/(vg+(ve/4)) #Since I have 2 replications and 2 years. So, it is 2x2= 4
