@@ -234,5 +234,21 @@ p1n + scale_color_manual(values = c("darkblue", "lightblue", "darkblue",
 
 ```
 
+## Bar Chart
+```{r}
+heritability <- read.csv("../data/heritability_all_copy_copy.csv")
+View(heritability)
+
+library(ggplot2)
+p <- ggplot(data=heritability, aes(x=traits, y=heritability, fill=treatment)) +
+  geom_bar(stat="identity", position=position_dodge())+
+  scale_fill_brewer(palette="Paired")+
+  theme_classic()
+
+p + scale_fill_manual(values=c("nitrogen" = "skyblue4","standard"= "skyblue1"))
+p + scale_fill_brewer(palette="Blues")
+
+```
+
 
 

@@ -54,3 +54,13 @@ ggmap(mymap) +
 
 ```
 
+
+
+
+
+```{r}
+install.package("devtools")
+devtools::install_github("pdil/usmap")
+install.packages("usmap")
+```
+
