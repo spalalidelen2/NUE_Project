@@ -1,0 +1,261 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+##Mineral Results 2020
+```{r}
+library(readr)
+cd <- read.csv("data/mineral results_2020.csv")
+head(cd)
+class(cd)
+View(cd)
+tail(cd)
+dim(cd)
+
+b97 <- subset(cd[1, c(1:24)])
+View(b97)
+
+View(b97$Cd...111)
+
+```
+
+
+
+##Published Mineral Results
+```{r}
+mydata <- read.csv("../data/Phe_282_mineral_ziegler copy.csv")
+head(mydata2)
+View(mydata2)
+library("tidyr")
+mydata2 <- gather(mydata, key = "Trait", value = "value", "B11", "Na23", "Mg25", "P31", "S34", "K39", "Ca43", "Mn55", "Fe57", "Co59", "Ni60", "Cu65", "Zn66", "As75", "Se82", "Rb85", "Sr88", "Mo98", "Cd111")
+
+
+mydata_op <- read.csv("../data/mineral results_b97_2020.csv")
+mydata_op2 <- gather (mydata_op, key = "Trait", value = "value_op", "B11", "Na23", "Mg25", "P31", "S34", "K39", "Ca43", "Mn55", "Fe57", "Co59", "Ni60", "Cu65", "Zn66", "As75", "Se82", "Rb85", "Sr88", "Mo98", "Cd111")
+
+total <- merge(mydata2, mydata_op2, by = "Trait")
+View(total)
+
+cor.test(total$value, total$value_op)
+
+library("ggpubr")
+ggscatter(total, x = "value", y = "value_op", color = "Trait",
+          add = "reg.line", add.params = list(color = "darkblue"), conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Micronutrient Content of Maize in Publicly Available Data", ylab = "Micronutrient Content of Maize from Test Run")
+
+
+
+
+#### What if we remove outliers which are P31, K39, Mg25, S34, Ca43 
+mydata <- read.csv("../data/Phe_282_mineral_ziegler copy.csv")
+head(mydata2)
+View(mydata2)
+library("tidyr")
+mydata2 <- gather(mydata, key = "Trait", value = "value", "B11", "Na23", "Mn55", "Fe57", "Co59", "Ni60", "Cu65", "Zn66", "As75", "Se82", "Rb85", "Sr88", "Mo98", "Cd111")
+
+
+mydata_op <- read.csv("../data/Book1.csv")
+mydata_op2 <- gather (mydata_op, key = "Trait", value = "value_op", "B11", "Na23", "Mn55", "Fe57", "Co59", "Ni60", "Cu65", "Zn66", "As75", "Se82", "Rb85", "Sr88", "Mo98", "Cd111")
+
+total <- merge(mydata2, mydata_op2, by = "Trait")
+View(total)
+
+cor.test(total$value, total$value_op)
+
+library("ggpubr")
+ggscatter(total, x = "value", y = "value_op",
+          add = "reg.line", add.params = list(color = "darkblue"), conf.int = TRUE, repel = TRUE, color = "Trait", label = "Trait",
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Micronutrient Content of Maize in Publicly Available Data", ylab = "Micronutrient Content of Maize from Test Run")
+
+
+
+
+
+```
+
+
+
+
+
+
+
+##heat map
+
+
+##Published Mineral Results
+```{r}
+mtcars <- read.csv("../data/Phe_282_mineral_ziegler copy.csv")
+head(mtcars)
+tail(mtcars)
+dim(mtcars)
+class(mtcars)
+View(mtcars)
+
+
+```
+
+
+
+
+```{r}
+library(ggplot2)
+install.packages("ggcorrplot")
+library(ggcorrplot)
+
+mtcars2<- as.numeric(as.character(mtcars))
+
+cor(mtcars)
+
+ggcorrplot(cor(mtcars))
+
+
+ggcorrplot(cor(mtcars), hc.order = TRUE)
+
+
+##
+cormat <- round(cor(mydata),2)
+head(cormat)
+
+
+install.packages("reshape2")
+library(reshape2)
+melted_cormat <- melt(cormat)
+head(melted_cormat)
+
+library(ggplot2)
+ggplot(data = melted_cormat, aes(x=Var1, y=Var2, fill=value)) + 
+  geom_tile()
+
+
+###
+corrplot::corrplot(cor(mtcars))
+ggcorrplot::ggcorrplot(cor(mtcars))
+
+library(knitr)
+library(tidyverse, warn.conflict=F)
+
+mtcars_cor <- Hmisc::rcorr(as.matrix(mtcars))
+
+data.frame(mtcars_cor$r) %>% head() %>% kable()
+data.frame(mtcars_cor$P) %>% head() %>% kable()
+data.frame(mtcars_cor$n) %>% head(n=3) %>% kable()
+
+
+
+cors <- function(df) { 
+   # turn all three matrices (r, n, and P into a data frame)
+   M <- Hmisc::rcorr(as.matrix(df))
+   # return the three data frames in a list return(Mdf)
+   Mdf <- map(M, ~data.frame(.x))
+}
+
+cors(mtcars) %>% first() %>% head() %>% kable()
+
+
+
+cors(mtcars) %>% 
+   map(~rownames_to_column(.x, var="measure1")) %>%
+   # look at the first element of the list (r)
+   first() %>%
+   head() %>%
+   kable()
+
+
+
+cors(mtcars) %>%
+ map(~rownames_to_column(.x, var="measure1")) %>%
+ # format each data set (r,P,n) long
+ map(~pivot_longer(.x, -measure1, "measure2")) %>%
+ # look at the first element of the list (r)
+ first() %>%
+ head() %>%
+ kable()
+
+
+
+cors(mtcars) %>%
+ map(~rownames_to_column(.x, var="measure1")) %>%
+ # format each data set (r,P,n) long 
+ map(~pivot_longer(.x, -measure1, "measure2")) %>%
+ # merge our three list elements by binding the rows
+ bind_rows(.id = "id") %>%
+ head() %>%
+ kable()
+
+
+
+cors(mtcars) %>%
+ map(~rownames_to_column(.x, var="measure1")) %>%
+ # format each data set (r,P,n) long 
+ map(~pivot_longer(.x, -measure1, "measure2")) %>%
+ # merge our three list elements by binding the rows
+ bind_rows(.id = "id") %>%
+ pivot_wider(names_from = id, values_from = value) %>%
+ head() %>%
+ kable()
+
+
+
+cors(mtcars) %>%
+ map(~rownames_to_column(.x, var="measure1")) %>%
+ # format each data set (r,P,n) long 
+ map(~pivot_longer(.x, -measure1, "measure2")) %>%
+ # merge our three list elements by binding the rows
+ bind_rows(.id = "id") %>%
+ pivot_wider(names_from = id, values_from = value) %>%
+ mutate(sig_p = ifelse(P < .05, T, F), p_if_sig = ifelse(P <.05, P, NA), r_if_sig = ifelse(r <.05, r, NA)) %>% 
+ head() %>%
+ kable()
+
+
+
+
+formatted_cors <- function(df){
+ cors(df) %>%
+ map(~rownames_to_column(.x, var="measure1")) %>%
+ map(~pivot_longer(.x, -measure1, "measure2")) %>% 
+ bind_rows(.id = "id") %>%
+ pivot_wider(names_from = id, values_from = value) %>%
+ mutate(sig_p = ifelse(P < .05, T, F), p_if_sig = ifelse(P <.05, P, NA), r_if_sig = ifelse(P <.05, r, NA)) 
+}
+
+formatted_cors(mtcars) %>% head() %>% kable()
+
+
+formatted_cors(mtcars) %>%
+ ggplot(aes(x = measure1, y = measure2, fill = r)) +
+ geom_tile()
+
+
+
+
+formatted_cors(mtcars) %>%
+ ggplot(aes(x = measure1, y = measure2, fill = r)) +
+ geom_tile() +
+ labs(x = NULL, y = NULL, fill = "Pearson's\nCorrelation", title="Correlations in Mineral Nutrient Content of Maize") +
+ # map a red, white and blue color scale to correspond to -1:1 sequential gradient 
+scale_fill_gradient2(mid="#FBFEF9",low="#0C6291",high="#A63446", limits=c(-1,1)) +
+ theme_classic() +
+ # remove excess space on x and y axes
+ scale_x_discrete(expand=c(0,0)) +
+ scale_y_discrete(expand=c(0,0))
+```
+
+
+###Distribution of Cd in B97 genotype
+```{r}
+cd <- read.csv("../data/mineral results_2020.csv")
+View(cd)
+head(cd)
+
+hist(cd$Cd...111, breaks = 8, col="#ee6a50",  xlab="Cob Width", ylab="freq", main="histogram")
+```

@@ -252,3 +252,32 @@ p + scale_fill_brewer(palette="Blues")
 
 
 
+
+
+```{r}
+all_blup<- read.csv("../cache/BLUP_RESULTS/all_blup_data.csv")
+View(all_blup)
+
+library(tidyr)
+library("ggplot2")
+p <- ggplot(c(all_blup$kwN, all_blup$kwnoN, all_blup$cwgN, all_blup$cwgnoN, all_blup$clnN, all_blup$clnnoN, all_blup$cwdN, all_blup$cwdnoN), aes(x = feed, y= weight))
+
+
+p <- ggplot(all_blup)
+p <- geom_boxplot()
+p <- theme_classic()
+p <- p + labs(title = "Box plot")
+p
+
+
+
+
+name <- 
+
+
+
+boxplot(all_blup$kwN, all_blup$kwnoN, all_blup$cwgN, all_blup$cwgnoN, all_blup$clnN, all_blup$clnnoN, all_blup$cwdN, all_blup$cwdnoN, main="Radicle Length in salty and nonsalty conditions", col="lightblue", xlab="Traits", ylab="Frequency", names = c("kwN=kernel weight", "clnN=cob length", "cwgN=cob weight", "cwdN=cob width"))
+```
+
+
+
