@@ -279,5 +279,18 @@ name <-
 boxplot(all_blup$kwN, all_blup$kwnoN, all_blup$cwgN, all_blup$cwgnoN, all_blup$clnN, all_blup$clnnoN, all_blup$cwdN, all_blup$cwdnoN, main="Radicle Length in salty and nonsalty conditions", col="lightblue", xlab="Traits", ylab="Frequency", names = c("kwN=kernel weight", "clnN=cob length", "cwgN=cob weight", "cwdN=cob width"))
 ```
 
+```{r}
+####SNP-BASED HERITABILITY
+
+snp_heritability<- read.csv("../data/snp_based_heritability_Semra2.csv")
+
+library(ggplot2)
+p <- ggplot(data=snp_heritability, aes(x=Traits, y=SNP_based_heritability, fill=Treatment)) +
+  geom_bar(stat="identity", position=position_dodge()) + theme_classic() +
+  scale_fill_brewer(direction=-1)
+             
+ p  
+
+```
 
 
