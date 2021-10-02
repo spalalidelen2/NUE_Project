@@ -16,6 +16,12 @@ View(cwd)
 pheno_cwd <- cwd[,c("nitrogen", "meancw")]
 View(pheno_cwd)
 
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("ggpubr")
+library("ggplot2")
+library("ggpubr")
+library("dplyr")
 pheno_cwd %>% 
   rename(Cob_Width_2018 = meancw) -> ph_2018.b
 
@@ -86,6 +92,7 @@ dim(ph_2018.b)
 ph_2018.c <- subset(ph_2018.a, Cob_Length_2018 > 5)
 #ph_2018.b <- subset(ph_2018.c, Cob_Length_2018 < 27)
 
+View(ph_2018)
 
 library(ggplot2)
 ggplot(ph_2018.c, aes(x = Cob_Length_2018, fill = nitrogen)) + 
@@ -95,6 +102,7 @@ ggplot(ph_2018.c, aes(x = Cob_Length_2018, fill = nitrogen)) +
 cwd2 <- subset(ph_2018.c, nitrogen %in% "+N")$Cob_Length_2018
 
 cwd3 <- subset(ph_2018.c, nitrogen %in% "-N")$Cob_Length_2018
+
 
 t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
 t.test(cwd2, cwd3)
@@ -241,7 +249,7 @@ dim(ph_2018.b)
 
 ph_2018.c <- subset(ph_2018.a, Weight_of_20_Kernel_2019 > 2)
 #ph_2018.b <- subset(ph_2018.a, Weight_of_20_Kernel_2018 < 8)
-
+View(ph_2018.c)
 
 library(ggplot2)
 ggplot(ph_2018.c, aes(x = Weight_of_20_Kernel_2019, fill = nitrogen)) + 
@@ -254,5 +262,85 @@ cwd3 <- subset(ph_2018.c, nitrogen %in% "-N")$Weight_of_20_Kernel_2019
 
 t.test(cwd2, cwd3, paired = TRUE, alternative = "two.sided")
 t.test(cwd2, cwd3)
+```
+
+
+###Collect all pheno data in one excel
+```{r}
+cwd <- read.csv("../cache/pheno2018_cobwidth.csv")
+pheno_cwd <- cwd[,c("nitrogen", "meancw", "Genotype")]
+pheno_cwd %>% 
+  rename(Cob_Width_2018 = meancw) -> ph_cwd.b
+
+cwg <- read.csv("../cache/pheno2018_cob_weight.csv")
+pheno_cwg <- cwg[,c("nitrogen", "Average.cob.weight", "Genotype")]
+pheno_cwg %>% 
+  rename(Cob_Weight_2018 = Average.cob.weight) -> ph_2018.a
+ph_2018.c <- subset(ph_2018.a, Cob_Weight_2018 > 2)
+cwg_2018.b <- subset(ph_2018.c, Cob_Weight_2018 < 35)
+
+cwl <- read.csv("../cache/pheno2018_cob_length.csv")
+pheno_cwl <- cwl[,c("nitrogen", "meancw", "Genotype")]
+pheno_cwl %>% 
+  rename(Cob_Length_2018 = meancw) -> ph_2018.a
+cwl_2018.c <- subset(ph_2018.a, Cob_Length_2018 > 5)
+
+kwg <- read.csv("../cache/pheno2018_20_kernel_weight.csv")
+pheno_kwg <- kwg [,c("nitrogen", "Weight.of.20.seeds", "Genotype")]
+pheno_kwg %>% 
+  rename(Weight_of_20_Kernel_2018 = Weight.of.20.seeds) -> ph_2018.a
+kwg_2018.b <- subset(ph_2018.a, Weight_of_20_Kernel_2018 < 8)
+
+cwd2 <- read.csv("../cache/pheno2019_cobwidth.csv")
+pheno_cwd <- cwd[,c("nitrogen", "meancw", "Genotype")]
+pheno_cwd %>% 
+  rename(Cob_Width_2019 = meancw) -> ph_cwd2.b
+
+cwg2 <- read.csv("../cache/pheno2019_cob_weight.csv")
+pheno_cwg2 <- cwg[,c("nitrogen", "Average.cob.weight", "Genotype")]
+pheno_cwg2 %>% 
+  rename(Cob_Weight_2019 = Average.cob.weight) -> ph_2018.a
+cwg2_2018.b <- subset(ph_2018.a, Cob_Weight_2019 < 37)
+
+cwl2 <- read.csv("../cache/pheno2019_cob_length.csv")
+pheno_cwl2 <- cwl2 [,c("nitrogen", "meancw", "Genotype")]
+pheno_cwl2 %>% 
+  rename(Cob_Length_2019 = meancw) -> ph_2018.a
+ph_2018.c <- subset(ph_2018.a, Cob_Length_2019 > 5)
+cwl2_2018.b <- subset(ph_2018.c, Cob_Length_2019 < 21)
+
+kwg2 <- read.csv("../cache/pheno2019_20_kernel_weight.csv")
+pheno_kwg2 <- kwg2 [,c("nitrogen", "Weight.of.20.seeds", "Genotype")]
+pheno_kwg2 %>% 
+  rename(Weight_of_20_Kernel_2019 = Weight.of.20.seeds) -> ph_2018.a
+kwg2_2018.c <- subset(ph_2018.a, Weight_of_20_Kernel_2019 > 2)
+#View(kwg2_2018.c)
+
+
+total_a <- merge(ph_cwd.b, cwg_2018.b, by=c("Genotype", "nitrogen") )
+total_b<-  merge(total_a, cwl_2018.c, by=c("Genotype", "nitrogen"))
+total_2018 <- merge(total_b, kwg_2018.b, by=c("Genotype", "nitrogen"))
+View(total_2018)
+
+total_c<- merge(ph_cwd2.b, cwg2_2018.b , by=c("Genotype", "nitrogen"))
+total_d<- merge(total_c, cwl2_2018.b , by=c("Genotype", "nitrogen"))
+total_2019 <- merge(total_d, kwg2_2018.c, by=c("Genotype", "nitrogen"))
+
+
+## Lets move them to excel and seperate +N and _N simply in excel!!
+install.packages("writexl")
+library("writexl")
+write_xlsx(total_2018, "../cache\\all_pheno_2018.xlsx")
+
+write_xlsx(total_2019, "../cache\\all_pheno_2019.xlsx")
+```
+
+
+```{r}
+N <- read.csv("../Book2.csv")
+noN<-read.csv("../Book3.csv")
+
+total_pheno <- merge(N, noN, by="Genotype")
+write_xlsx(total_pheno, "../cache\\sem_2018.xlsx")
 ```
 

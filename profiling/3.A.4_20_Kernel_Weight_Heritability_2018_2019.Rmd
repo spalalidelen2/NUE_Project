@@ -239,13 +239,16 @@ p1n + scale_color_manual(values = c("darkblue", "lightblue", "darkblue",
 heritability <- read.csv("../data/heritability_all_copy_copy.csv")
 View(heritability)
 
+
+
 library(ggplot2)
-p <- ggplot(data=heritability, aes(x=traits, y=heritability, fill=treatment)) +
+p <- ggplot(data=heritability, aes(x=Traits, y=Heritability, fill=Treatment)) +
   geom_bar(stat="identity", position=position_dodge())+
   scale_fill_brewer(palette="Paired")+
-  theme_classic()
+  theme(axis.text=element_text(size=14), axis.title=element_text(size=17)) 
+  #theme_classic()
 
-p + scale_fill_manual(values=c("nitrogen" = "skyblue4","standard"= "skyblue1"))
+p + scale_fill_manual(values=c("HN" = "skyblue4","LN"= "skyblue1"))
 p + scale_fill_brewer(palette="Blues")
 
 ```
@@ -282,11 +285,25 @@ boxplot(all_blup$kwN, all_blup$kwnoN, all_blup$cwgN, all_blup$cwgnoN, all_blup$c
 ```{r}
 ####SNP-BASED HERITABILITY
 
-snp_heritability<- read.csv("../data/snp_based_heritability_Semra2.csv")
+snp_heritability<- read.csv("../data/snp_based_heritability.csv")
+View(snp_heritability)
 
 library(ggplot2)
+
+snp_heritability_hn_ln<-snp_heritability[c(1,2,6,7,11,12,16,17), ]
+
+p <- ggplot(data=snp_heritability_hn_ln, aes(x=Traits, y=SNP_based_heritability, fill=Treatment)) +
+  geom_bar(stat="identity", position=position_dodge())+
+  scale_fill_brewer(palette="Paired")+
+  theme(axis.text=element_text(size=14), axis.title=element_text(size=17))
+  #theme_classic()
+
+p + scale_fill_manual(values=c("HN" = "skyblue4","LN"= "skyblue1"))
+
+ 
+
 p <- ggplot(data=snp_heritability, aes(x=Traits, y=SNP_based_heritability, fill=Treatment)) +
-  geom_bar(stat="identity", position=position_dodge()) + theme_classic() +
+  geom_bar(stat="identity", position=position_dodge()) + theme(axis.text=element_text(size=14), axis.title=element_text(size=17)) +
   scale_fill_brewer(direction=-1)
              
  p  
